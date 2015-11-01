@@ -23,15 +23,23 @@ public class OpenFencedoor : MonoBehaviour
             // just add a relevant counter
             // this will not work for all computers and thus should not be used in production
 
-            if (i < 90) {
+            if (i < 90)
+            {
                 //rotate the fence post
-                gameObject.transform.Rotate(new Vector3(0, i, 0) * Time.deltaTime* 2, Space.Self);
+                gameObject.transform.Rotate(new Vector3(0, i, 0) * Time.deltaTime * 2, Space.Self);
                 //y you no increment
-                
+
                 i += 1;
 
                 // Debug.Log(i);
 
+            }
+            else {
+                if(i<127)
+                gameObject.transform.Rotate(new Vector3(0,-i, 0 )*Time.deltaTime*2, Space.Self);
+                i += 1;
+                Debug.Log(i);
+                return;
             }
                         
             //depricated
