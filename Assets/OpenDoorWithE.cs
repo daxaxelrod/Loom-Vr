@@ -13,6 +13,7 @@ using System.Collections;
 
 
 
+
         // Use this for initialization
         void Start()
         {
@@ -35,7 +36,7 @@ using System.Collections;
         // if (triggervar.allowDoorOpen)
             if(Input.GetKey(KeyCode.E))
         {
-                Debug.Log("got through first if");
+               // Debug.Log("got through first if");
                 if (gameObject.transform.position.y >= -10)
                 {
                     //lolz needs work

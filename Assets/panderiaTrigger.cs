@@ -3,12 +3,21 @@ using System.Collections;
 
 namespace panderiaTrigger
 {
+
+    
     public class panderiaTrigger : MonoBehaviour
     {
+        private OpenDoorWithE openDoorWithE;
 
         private Color black = new Color(0, 0, 0, 1);
         private bool hitTrigger = false;
-        public bool allowDoorOpen = false;
+        // private GameObject openDoorWithE;
+
+
+
+
+        // depricated
+        // public bool allowDoorOpen = false;
 
 
 
@@ -19,7 +28,10 @@ namespace panderiaTrigger
         {
             Debug.Log("Object Entered the panderia trigger");
             hitTrigger = true;
-            allowDoorOpen = true;
+            
+            //depricated
+            // allowDoorOpen = true;
+
         }
 
 
@@ -34,6 +46,8 @@ namespace panderiaTrigger
         {
             Debug.Log("Oh good you left. Ta ta for now");
             hitTrigger = false;
+           
+             
         }
 
 
@@ -45,7 +59,16 @@ namespace panderiaTrigger
         // Use this for initialization
         void Start()
         {
-            //dont think we add anything here
+            //this works
+            openDoorWithE = GetComponent<OpenDoorWithE>();
+            //this does not
+            //fuck
+
+            //Debug.Log(openDoorWithE.enabled);
+           
+            //Debug.Log(openDoorWithE.enabled);
+
+
 
         }
 
@@ -54,6 +77,12 @@ namespace panderiaTrigger
         {
             // ok this is going to be really inefficiant but it might work
 
+            //FUCK JUST GAVE A DEMO AND THE SCIPTS ARE NOT WORKING!!!
+            //LOL
+            //IM DRUNK
+            // openDoorWithE  = gameObject.GetComponent("Open Door With E");
+
+
             //update new game object here
 
             if (hitTrigger)
@@ -61,6 +90,11 @@ namespace panderiaTrigger
 
 
                 //gameObject.AddComponent();
+
+                openDoorWithE.enabled = true;
+
+
+
 
                 // TODO 
                 //1) create 1 new 3d text node saying press e to open door
@@ -97,6 +131,11 @@ namespace panderiaTrigger
                 doorTM.text = "Press E to open door";
                 doorTM.color = black;
 
+
+                
+
+
+    
 
                // Debug.Log(doorSubObject.transform.position.x);
                // Debug.Log(doorSubObject.transform.position.y);
