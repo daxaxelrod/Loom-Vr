@@ -94,7 +94,13 @@ namespace panderiaTrigger
                 openDoorWithE.enabled = true;
 
 
+                TextMesh meshText = gameObject.GetComponentInChildren<TextMesh>();
 
+                meshText.text = "Open Door with E";
+
+
+
+                Debug.Log(meshText);
 
                 // TODO 
                 //1) create 1 new 3d text node saying press e to open door
