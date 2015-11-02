@@ -3,18 +3,21 @@ using System.Collections;
 
 public class GirlMovement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
         MeshRenderer m = gameObject.GetComponent<MeshRenderer>();
-        
-    //    m._e
+
+        //    m._e
 
 
         foreach (Transform extremity in gameObject.transform)
+        {
 
-            Debug.Log(extremity);
+            // Debug.Log(extremity);
 
+        }
     }
 
 

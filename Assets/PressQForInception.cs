@@ -8,18 +8,19 @@ public class PressQForInception : MonoBehaviour {
 
 
 
-    void OnTriggerEnter(Collider camera)
+    public void OnTriggerEnter(Collider camera)
     {
         enteredInceptionZone = true;
     }
 
-    void OnTriggerExit(Collider camera)
+    public void OnTriggerExit(Collider camera)
     {
         Debug.Log("BWAAAAA you left, BWAAAA");
         enteredInceptionZone = false;
 
 
     }
+
 
 
 

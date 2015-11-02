@@ -22,10 +22,10 @@ public class Collider : MonoBehaviour
     lerp playerObject material opacity to 100%
     */
 
-    public void onTriggerEnter(Collider camera) {
-        Debug.Log("Entered the spherical zone");
-        return;
-    }
+ //   public void onTriggerEnter(Collider camera) {
+     //   Debug.Log("Entered the spherical zone");
+       // if (Input.GetAxis("Y") != null) { return; }
+   // }
 
 
 	// Use this for initialization
