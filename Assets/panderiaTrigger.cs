@@ -38,8 +38,8 @@ namespace panderiaTrigger
         void OnTriggerStay(Collider camera)
         {
             //Debug.Log("Still here?");
-            if (hitTrigger) { hitTrigger = false; }
-            else { hitTrigger = true; }
+           // if (hitTrigger) { hitTrigger = false; }
+            //else { hitTrigger = true; }
         }
 
         void OnTriggerExit(Collider camera)
