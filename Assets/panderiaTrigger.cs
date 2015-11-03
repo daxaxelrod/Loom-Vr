@@ -5,7 +5,7 @@ namespace panderiaTrigger
 {
 
     
-    public class panderiaTrigger : MonoBehaviour
+public class panderiaTrigger : MonoBehaviour
     {
         private OpenDoorWithE openDoorWithE;
 
@@ -24,7 +24,7 @@ namespace panderiaTrigger
         //triggers are not updated once per frame....should they?
         //no fucking clue david
         // thanks david
-        void OnTriggerEnter(Collider camera)
+        void OnTriggerEnter(Collider otherTingYouHitMan)
         {
             Debug.Log("Object Entered the panderia trigger");
             hitTrigger = true;
@@ -35,18 +35,19 @@ namespace panderiaTrigger
         }
 
 
-        void OnTriggerStay(Collider camera)
+        void OnTriggerStay(Collider otherTingYouHitMan)
         {
             //Debug.Log("Still here?");
-           // if (hitTrigger) { hitTrigger = false; }
+            // if (hitTrigger) { hitTrigger = false; }
             //else { hitTrigger = true; }
+            return;
         }
 
-        void OnTriggerExit(Collider camera)
+        void OnTriggerExit(Collider otherTingYouHitMan)
         {
             Debug.Log("Oh good you left. Ta ta for now");
             hitTrigger = false;
-           
+            return;
              
         }
 

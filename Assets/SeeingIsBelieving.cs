@@ -7,7 +7,6 @@ public class SeeingIsBelieving : MonoBehaviour {
     RaycastHit hit;
     private float raycastLength = 1000;
 
-    private GameObject centerEyePose = GameObject.Find("CenterEyeAnchor");
 
     private Ray cameraRay;
 
@@ -16,14 +15,26 @@ public class SeeingIsBelieving : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //sets a new ray from the camera to where the camera is looking
-        
-        
+
+          GameObject gameCamera = GameObject.Find("CenterEyeAnchor");
+
+        //lies below
+
+        // AHhhhyou can only use unity functions at the main thread level
+        // start and update are main level functions. 
+        //does that mean stuff at the top is secondary???
+        // whatever bro
+        //what
+        //ever
+        //
+
+        // 
+        //bro
 
 
 
 
-
-    }
+}
 	
 	// Update is called once per frame
 	void Update () {
@@ -35,11 +46,15 @@ public class SeeingIsBelieving : MonoBehaviour {
 
         //keep getting error object reference not set to an instanec of an object
         //what the actual fuck
-        cameraRay = new Ray((gameObject.transform.position), gameObject.transform.eulerAngles + centerEyePose.transform.position);
+       
+        //TODO come back to line 41 and fix the ray physics
+
+        
+        // cameraRay = new Ray((gameObject.transform.position), gameObject.transform.eulerAngles + centerEyePose.transform.position);
 
 
         if (Input.GetMouseButton(0)) {
-            Debug.DrawRay(transform.position, gameObject.transform.eulerAngles + centerEyePose.transform.position, Color.red, 10);
+            Debug.DrawRay(transform.position, gameObject.transform.eulerAngles + gameObject.transform.position, Color.red, 10);
             Debug.Log("Ray Drawn");
 
         }

@@ -17,8 +17,7 @@ public class PressQForInception : MonoBehaviour {
     {
         Debug.Log("BWAAAAA you left, BWAAAA");
         enteredInceptionZone = false;
-
-
+        
     }
 
 

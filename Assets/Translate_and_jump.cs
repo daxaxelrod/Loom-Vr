@@ -78,7 +78,7 @@ public class Translate_and_jump : MonoBehaviour
     {
         // may have extract this into a settings menu
         //change tank based vs view based control
-        if (Input.GetKey(KeyCode.LeftShift)) {
+        if (Input.GetKey(KeyCode.RightShift)) {
             if (tankOrViewMovement)
             {
                 tankOrViewMovement = false;
