@@ -45,7 +45,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AVProMovieCapture\DemoScenes\MovieCaptureDemo.cs" />
+     <Compile Include="Assets\AVProMovieCapture\DemoScenes\TextureCaptureDemo.cs" />
+     <Compile Include="Assets\AVProMovieCapture\DemoScenes\WebcamCaptureDemo.cs" />
+     <Compile Include="Assets\AVProMovieCapture\Scripts\AVProMovieCaptureBase.cs" />
+     <Compile Include="Assets\AVProMovieCapture\Scripts\AVProMovieCaptureFromCamera.cs" />
+     <Compile Include="Assets\AVProMovieCapture\Scripts\AVProMovieCaptureFromScene.cs" />
+     <Compile Include="Assets\AVProMovieCapture\Scripts\AVProMovieCaptureFromTexture.cs" />
+     <Compile Include="Assets\AVProMovieCapture\Scripts\AVProMovieCaptureGUI.cs" />
+     <Compile Include="Assets\AVProMovieCapture\Scripts\AVProMovieCapturePlugin.cs" />
+     <Compile Include="Assets\AVProMovieCapture\Scripts\AVProUnityAudioCapture.cs" />
      <Compile Include="Assets\GirlMovement.cs" />
+     <Compile Include="Assets\HorseRandomWalk.cs" />
      <Compile Include="Assets\MakeHemisphere.cs" />
      <Compile Include="Assets\MoveTrainexwheels.cs" />
      <Compile Include="Assets\OVR\Moonlight\Scripts\OVRDebugHeadController.cs" />
@@ -94,6 +105,7 @@
      <Compile Include="Assets\Translate_and_jump.cs" />
      <Compile Include="Assets\function.cs" />
      <Compile Include="Assets\panderiaTrigger.cs" />
+     <Compile Include="Assets\poopItself.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -113,6 +125,7 @@
      <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
+     <None Include="Assets\AVProMovieCapture\Shaders\AVProMovieCapture_RGBA2YCbCr.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
@@ -126,6 +139,7 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
      <None Include="Assets\Standard Assets\Vehicles\Aircraft\AircraftGuidelines.txt" />
+     <None Include="Assets\AVProMovieCapture\Shaders\AVProMovieCapture_RedBlueSwap.shader" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\OVR\Moonlight\Shaders\Unlit Crosshair.shader" />
@@ -155,6 +169,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+     <None Include="Assets\AVProMovieCapture\Shaders\AVProMovieCapture_Shared.cginc" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />

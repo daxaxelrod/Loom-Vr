@@ -94,14 +94,21 @@ public class panderiaTrigger : MonoBehaviour
 
                 openDoorWithE.enabled = true;
 
+                try
+                {
+                    TextMesh meshDoorText = gameObject.GetComponentInChildren<TextMesh>();
 
-                TextMesh meshText = gameObject.GetComponentInChildren<TextMesh>();
+                    meshDoorText.text = "Open Door with E";
+                    Debug.Log(meshDoorText.text);
+                }
+                catch {
+                    //null reference exception
+                    Debug.LogError("Error with the mesh text bro");
+                    return;
+                }
 
-                meshText.text = "Open Door with E";
 
 
-
-                Debug.Log(meshText);
 
                 // TODO 
                 //1) create 1 new 3d text node saying press e to open door
