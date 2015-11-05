@@ -33,28 +33,28 @@ public class HorseRandomWalk : MonoBehaviour {
         
     //maybe just declare n in global scope?
 
-        Mesh meshy = gameObject.GetComponentInChildren<Mesh>();
-        n = 200f;
+        //Mesh meshy = gameObject.GetComponentInChildren<Mesh>();
+        n = 10f;
         for (int i = 0; i < n; i++) {
 
             //Random randomHorse = new Random();
             Vector3 decidingVector = new Vector3(Mathf.Round(Random.Range(0, 5)), 0, 0);
             if (decidingVector.x == 1) {
                 //right
-                gameObject.transform.Translate(Vector3.right);
+                gameObject.transform.Translate(Vector3.right/75);
             }
             if (decidingVector.x == 2) {
-                gameObject.transform.Translate(Vector3.left);
+                gameObject.transform.Translate(Vector3.left/75);
                 //left
 
             }
             if (decidingVector.x == 3) {
                 //forward
-                gameObject.transform.Translate(Vector3.forward);
+                gameObject.transform.Translate(Vector3.forward/75);
             }
             if (decidingVector.x == 4) {
                 // down
-                gameObject.transform.Translate(Vector3.back);
+                gameObject.transform.Translate(Vector3.back/75);
             }
             
         }

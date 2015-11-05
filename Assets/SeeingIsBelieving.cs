@@ -5,10 +5,12 @@ public class SeeingIsBelieving : MonoBehaviour {
 
 
     RaycastHit hit;
-    private float raycastLength = 1000;
+    private float raycastTimeLength = 1000;
 
 
     private Ray cameraRay;
+
+
 
 
 
@@ -16,7 +18,7 @@ public class SeeingIsBelieving : MonoBehaviour {
     void Start () {
         //sets a new ray from the camera to where the camera is looking
 
-          GameObject gameCamera = GameObject.Find("CenterEyeAnchor");
+        //  GameObject gameCamera = GameObject.Find("CenterEyeAnchor");
 
         //lies below
 
@@ -34,7 +36,7 @@ public class SeeingIsBelieving : MonoBehaviour {
 
 
 
-}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -46,15 +48,25 @@ public class SeeingIsBelieving : MonoBehaviour {
 
         //keep getting error object reference not set to an instanec of an object
         //what the actual fuck
-       
+
         //TODO come back to line 41 and fix the ray physics
 
-        
+
         // cameraRay = new Ray((gameObject.transform.position), gameObject.transform.eulerAngles + centerEyePose.transform.position);
 
+        //returns an error saying that the current expression denotes a method group
+        //Debug.Log(GetType());
 
-        if (Input.GetMouseButton(0)) {
-            Debug.DrawRay(transform.position, gameObject.transform.eulerAngles + gameObject.transform.position, Color.red, 10);
+        //center eye anchor is a gameobject, not a camera
+       GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        //why they thought that was a good idea, i have no clue. Useful in other contexts as well though
+
+
+        if (Input.GetKey(KeyCode.A)) {
+            //Debug.DrawRay(new Vector3(-11f, 9.6f, -49.58f), gameObject.transform.forward, Color.red, 10);
+            // Debug.DrawRay(gameObject.transform.position, camera.transform.foward);
+            Ray rayToUse = new Ray(mainCamera.transform.position, transform.forward);
+            Debug.DrawRay(rayToUse.origin, rayToUse.direction * 500000, Color.red, raycastTimeLength);
             Debug.Log("Ray Drawn");
 
         }
