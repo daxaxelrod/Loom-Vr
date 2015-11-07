@@ -41,20 +41,20 @@ public class HorseRandomWalk : MonoBehaviour {
             Vector3 decidingVector = new Vector3(Mathf.Round(Random.Range(0, 5)), 0, 0);
             if (decidingVector.x == 1) {
                 //right
-                gameObject.transform.Translate(Vector3.right/75);
+                gameObject.transform.Translate(Vector3.right/10);
             }
             if (decidingVector.x == 2) {
-                gameObject.transform.Translate(Vector3.left/75);
+                gameObject.transform.Translate(Vector3.left/10);
                 //left
 
             }
             if (decidingVector.x == 3) {
                 //forward
-                gameObject.transform.Translate(Vector3.forward/75);
+                gameObject.transform.Translate(Vector3.forward/10);
             }
             if (decidingVector.x == 4) {
                 // down
-                gameObject.transform.Translate(Vector3.back/75);
+                gameObject.transform.Translate(Vector3.back/10);
             }
             
         }

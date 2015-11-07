@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Translate_and_jump : MonoBehaviour
 {
@@ -61,6 +62,8 @@ public class Translate_and_jump : MonoBehaviour
 
     //  Collider sphereCollider = new Collider();
 
+    public InputField[] openingTextField = null; // GameObject.FindGameObjectsWithTag("Input") as InputField;
+    private Button submitButton = null;
 
 
 
@@ -74,8 +77,16 @@ public class Translate_and_jump : MonoBehaviour
     public Quaternion currentOrientaion = OVRPose.identity.orientation;
 
 
+    void Start() {
+        //openingTextField.onS
+    }
+
+
     void Update()
     {
+        
+
+
         // may have extract this into a settings menu
         //change tank based vs view based control
         if (Input.GetKey(KeyCode.RightShift)) {

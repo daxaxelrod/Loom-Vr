@@ -57,6 +57,7 @@
      <Compile Include="Assets\AVProMovieCapture\Scripts\AVProUnityAudioCapture.cs" />
      <Compile Include="Assets\GirlMovement.cs" />
      <Compile Include="Assets\HorseRandomWalk.cs" />
+     <Compile Include="Assets\InputReceptorText.cs" />
      <Compile Include="Assets\MakeHemisphere.cs" />
      <Compile Include="Assets\MoveTrainexwheels.cs" />
      <Compile Include="Assets\OVR\Moonlight\Scripts\OVRDebugHeadController.cs" />

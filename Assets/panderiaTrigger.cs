@@ -142,8 +142,8 @@ public class panderiaTrigger : MonoBehaviour
                 doorSubObject.AddComponent<TextMesh>();
                 //create textmesh and set text
                 TextMesh doorTM = doorSubObject.GetComponent<TextMesh>();
-                doorTM.text = "Press E to open door";
-                doorTM.color = black;
+                //doorTM.text = "Press E to open door";
+               // doorTM.color = black;
 
 
                 
