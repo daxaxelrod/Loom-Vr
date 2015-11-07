@@ -37,6 +37,11 @@ public class Translate_and_jump : MonoBehaviour
 
 
 
+
+
+
+
+
     /*
         if the camera collides with something
 
@@ -84,8 +89,12 @@ public class Translate_and_jump : MonoBehaviour
 
     void Update()
     {
-        
 
+        if (Input.GetKey(KeyCode.R)) {
+            Debug.Log("Hit BEFORE recenter pose");
+            OVRManager.display.RecenterPose();
+            Debug.Log("Hit after recenter pose");
+        }
 
         // may have extract this into a settings menu
         //change tank based vs view based control
@@ -124,7 +133,7 @@ public class Translate_and_jump : MonoBehaviour
 
     }
 
-             public void ResetOrientation()
+    public void ResetOrientation()
     {
         if (HmdResetsY)
         {
@@ -138,48 +147,48 @@ public class Translate_and_jump : MonoBehaviour
 
 
 
-// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-//override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-// { }
-// ok pass in a translational animator, the object that we want shifted and then the index layer. What?}
+    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    // { }
+    // ok pass in a translational animator, the object that we want shifted and then the index layer. What?}
 
-    
-    
+
+
 
 
     public void tankBasedControls() {
 
-    //lets give using head tracking as forward
-    if (Input.GetKey(KeyCode.UpArrow))
-    {
-        // Vector3 rotatedForward = currentOrientaion* (Vector3.forward + currentPosition);
-        // transform.Rotate.currentOrientaion //nope
-        transform.Translate(Vector3.forward * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
-        // OVRManager.display.RecenterPose += ;
-        //gameObject.Updated
+        //lets give using head tracking as forward
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            // Vector3 rotatedForward = currentOrientaion* (Vector3.forward + currentPosition);
+            // transform.Rotate.currentOrientaion //nope
+            transform.Translate(Vector3.forward * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
+            // OVRManager.display.RecenterPose += ;
+            //gameObject.Updated
 
-        //transform.Translate(Vector3.forward * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
+            //transform.Translate(Vector3.forward * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Translate(currentOrientaion * Vector3.back * Time.deltaTime * moveTheGodDamnSphere, Space.Self);
+            //            Transform.Translate(new Vector3)
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(currentOrientaion * Vector3.right * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
+
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(Vector3.left * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
+
+        }
+
+
     }
-
-    if (Input.GetKey(KeyCode.DownArrow))
-    {
-        transform.Translate(currentOrientaion * Vector3.back * Time.deltaTime * moveTheGodDamnSphere, Space.Self);
-        //            Transform.Translate(new Vector3)
-    }
-
-    if (Input.GetKey(KeyCode.RightArrow))
-    {
-        transform.Translate(currentOrientaion * Vector3.right * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
-
-    }
-    if (Input.GetKey(KeyCode.LeftArrow))
-    {
-        transform.Translate(Vector3.left * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
-
-    }
-
-
-}
 
 
     public void visionBasedControls() {
@@ -194,6 +203,7 @@ public class Translate_and_jump : MonoBehaviour
             Debug.Log("You are pressing the left mouse key bro");
 
 
+
             // lets get some directional movement going
             //Steps
             //Find the direction of the current gaze and set that to be the start of the cordinate system each frame
@@ -202,7 +212,7 @@ public class Translate_and_jump : MonoBehaviour
 
 
 
-            
+
 
 
 
@@ -210,6 +220,7 @@ public class Translate_and_jump : MonoBehaviour
 
     }
 
+  
 
 
 

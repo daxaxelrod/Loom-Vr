@@ -9,7 +9,7 @@ public class panderiaTrigger : MonoBehaviour
     {
         private OpenDoorWithE openDoorWithE;
 
-        private Color black = new Color(0, 0, 0, 1);
+        //private Color black = new Color(0, 0, 0, 1);
         private bool hitTrigger = false;
         // private GameObject openDoorWithE;
 
@@ -103,7 +103,8 @@ public class panderiaTrigger : MonoBehaviour
                 }
                 catch {
                     //null reference exception
-                    Debug.LogError("Error with the mesh text bro");
+                    //Debug.LogError("Error with the mesh text bro");
+                    Debug.Log("Catch is about to go through. something is wrong with this door");
                     return;
                 }
 

@@ -20,3 +20,7 @@ C:\Users\David\Documents\VR Linguistics\Temp\bin\Debug\UnityEngine.Networking.xm
 C:\Users\David\Documents\VR Linguistics\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 C:\Users\David\Documents\VR Linguistics\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\David\Documents\VR Linguistics\obj\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\David\Documents\VR Linguistics\Temp\bin\Debug\UnityEngine.Advertisements.dll
+C:\Users\David\Documents\VR Linguistics\Temp\bin\Debug\UnityEngine.Analytics.dll
+C:\Users\David\Documents\VR Linguistics\Temp\bin\Debug\UnityEngine.Advertisements.xml
+C:\Users\David\Documents\VR Linguistics\Temp\bin\Debug\UnityEngine.Analytics.xml

@@ -15,7 +15,15 @@ public class HorseRandomWalk : MonoBehaviour {
         int[,] matrix;
         matrix = new int[row, col];
 
-        
+
+        // Bounds horseBound = ;
+        //set bound points
+        //these break unity
+        //oops
+        //var boundPoint1 = GetComponent<Collider>().bounds.min;
+        //var boundPoint2 = GetComponent<Collider>().bounds.max;
+
+
 
         Random randomMover = new Random();
         
@@ -29,7 +37,7 @@ public class HorseRandomWalk : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-
+        
         
     //maybe just declare n in global scope?
 
