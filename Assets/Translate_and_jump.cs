@@ -84,6 +84,8 @@ public class Translate_and_jump : MonoBehaviour
 
     void Start() {
         //openingTextField.onS
+        Quaternion startRotation = transform.rotation;
+
     }
 
 
@@ -159,7 +161,7 @@ public class Translate_and_jump : MonoBehaviour
     public void tankBasedControls() {
 
         //lets give using head tracking as forward
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             // Vector3 rotatedForward = currentOrientaion* (Vector3.forward + currentPosition);
             // transform.Rotate.currentOrientaion //nope
@@ -170,18 +172,18 @@ public class Translate_and_jump : MonoBehaviour
             //transform.Translate(Vector3.forward * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             transform.Translate(currentOrientaion * Vector3.back * Time.deltaTime * moveTheGodDamnSphere, Space.Self);
             //            Transform.Translate(new Vector3)
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             transform.Translate(currentOrientaion * Vector3.right * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
 
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             transform.Translate(Vector3.left * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
 
@@ -202,7 +204,24 @@ public class Translate_and_jump : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             Debug.Log("You are pressing the left mouse key bro");
 
+            //  OVRResetOrientation reset;
 
+            Quaternion userHeadQuaternion = OVRPose.identity.orientation;
+            Vector3 userHeadEuler = OVRPose.identity.orientation.eulerAngles;
+
+            userHeadEuler.y = 0;
+
+           // Quaternion localEuler = Quaternion.AngleAxis(userHeadEuler.x, userHeadQuaternion);
+            
+
+
+            //gameObject.transform.Translate(newForward, Space.World);
+
+
+            
+            //OVRManager.display.RecenterPose();
+
+           // reset.guiText = "Test v8" ;
 
             // lets get some directional movement going
             //Steps
