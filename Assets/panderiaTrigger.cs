@@ -8,6 +8,7 @@ namespace panderiaTrigger
 public class panderiaTrigger : MonoBehaviour
     {
         private OpenDoorWithE openDoorWithE;
+       
 
         //private Color black = new Color(0, 0, 0, 1);
         private bool hitTrigger = false;
@@ -91,8 +92,9 @@ public class panderiaTrigger : MonoBehaviour
 
 
                 //gameObject.AddComponent();
-
+                
                 openDoorWithE.enabled = true;
+                
 
                 try
                 {

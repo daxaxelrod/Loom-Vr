@@ -9,7 +9,7 @@ using System.Collections;
     {
         public bool doorOpenable;
 
-
+        int onlyOnce = 0;
 
 
 
@@ -36,6 +36,15 @@ using System.Collections;
         // if (triggervar.allowDoorOpen)
             if(Input.GetKey(KeyCode.E))
         {
+
+            if (GetComponent<AudioSource>() != null)
+            {
+                if (onlyOnce <= 1)
+                {
+                    GetComponent<AudioSource>().Play();
+                    onlyOnce++;
+                }
+            }
                // Debug.Log("got through first if");
                 if (gameObject.transform.position.y >= -10)
                 {
