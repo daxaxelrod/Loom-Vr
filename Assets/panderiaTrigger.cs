@@ -13,7 +13,7 @@ public class panderiaTrigger : MonoBehaviour
         //private Color black = new Color(0, 0, 0, 1);
         private bool hitTrigger = false;
         // private GameObject openDoorWithE;
-
+        int count = 0;
 
 
 
@@ -86,31 +86,23 @@ public class panderiaTrigger : MonoBehaviour
 
 
             //update new game object here
+            //gotta make sure to turn this off
 
-            if (hitTrigger)
+            if (hitTrigger || count <= 1 )
             {
 
-
+                count++;
                 //gameObject.AddComponent();
                 
                 openDoorWithE.enabled = true;
                 
 
-                try
-                {
-                    TextMesh meshDoorText = gameObject.GetComponentInChildren<TextMesh>();
+ 
+                TextMesh meshDoorText = gameObject.GetComponentInChildren<TextMesh>();
 
-                    meshDoorText.text = "Open Door with E";
-                    Debug.Log(meshDoorText.text);
-                }
-                catch {
-                    //null reference exception
-                    //Debug.LogError("Error with the mesh text bro");
-                    Debug.Log("Catch is about to go through. something is wrong with this door");
-                    return;
-                }
-
-
+                meshDoorText.text = "Open Door with E";
+                //Debug.Log(meshDoorText.text);
+            
 
 
                 // TODO 
@@ -165,9 +157,9 @@ public class panderiaTrigger : MonoBehaviour
                                                                1.04f,
                                                                 -.72f);
 
-                Debug.Log(doorSubObject.transform.position.x);
-                Debug.Log(doorSubObject.transform.position.y);
-                Debug.Log(doorSubObject.transform.position.z);
+                //Debug.Log(doorSubObject.transform.position.x);
+                //Debug.Log(doorSubObject.transform.position.y);
+                //Debug.Log(doorSubObject.transform.position.z);
                
                 //rotate y to -90
                 doorSubObject.transform.Rotate(new Vector3(0, -90));
