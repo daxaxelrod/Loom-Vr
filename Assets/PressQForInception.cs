@@ -5,18 +5,19 @@ public class PressQForInception : MonoBehaviour {
 
     private bool enteredInceptionZone = false;
     private int inceptionTurner = 5;
-
+    bool dudeStartTheBWWWAAAAAWWWSSS = false;
+    int counter = 0;
 
 
     public void OnTriggerEnter(Collider camera)
     {
-        enteredInceptionZone = true;
+        dudeStartTheBWWWAAAAAWWWSSS = true;
     }
 
     public void OnTriggerExit(Collider camera)
     {
         Debug.Log("BWAAAAA you left, BWAAAA");
-        enteredInceptionZone = false;
+        //dudeStartTheBWWWAAAAAWWWSSS = false;
         
     }
 
@@ -30,9 +31,12 @@ public class PressQForInception : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.Q) || enteredInceptionZone) {
-            gameObject.transform.Rotate(inceptionTurner*Vector3.back*Time.deltaTime ,Space.Self);
+        if (dudeStartTheBWWWAAAAAWWWSSS && counter < 1000) {
+
+            gameObject.transform.Rotate(inceptionTurner * Vector3.back * Time.deltaTime, Space.Self);
+            counter++;
+            
         }
-	
+   
 	}
 }

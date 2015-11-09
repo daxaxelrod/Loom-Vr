@@ -108,6 +108,7 @@
      <Compile Include="Assets\StopCameraMovement.cs" />
      <Compile Include="Assets\Translate_and_jump.cs" />
      <Compile Include="Assets\function.cs" />
+     <Compile Include="Assets\goUpStairs.cs" />
      <Compile Include="Assets\panderiaTrigger.cs" />
      <Compile Include="Assets\poopItself.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />

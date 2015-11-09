@@ -13,7 +13,7 @@ public class panderiaTrigger : MonoBehaviour
         //private Color black = new Color(0, 0, 0, 1);
         private bool hitTrigger = false;
         // private GameObject openDoorWithE;
-        int count = 0;
+      //  int count = 0;
 
 
 
@@ -39,8 +39,8 @@ public class panderiaTrigger : MonoBehaviour
         void OnTriggerStay(Collider otherTingYouHitMan)
         {
             //Debug.Log("Still here?");
-            // if (hitTrigger) { hitTrigger = false; }
-            //else { hitTrigger = true; }
+             if (hitTrigger) { hitTrigger = false; }
+            else { hitTrigger = true; }
             return;
         }
 
@@ -88,10 +88,11 @@ public class panderiaTrigger : MonoBehaviour
             //update new game object here
             //gotta make sure to turn this off
 
-            if (hitTrigger || count <= 1 )
+            // || count <= 1
+            if (hitTrigger )
             {
 
-                count++;
+                //count++;
                 //gameObject.AddComponent();
                 
                 openDoorWithE.enabled = true;
@@ -99,7 +100,6 @@ public class panderiaTrigger : MonoBehaviour
 
  
                 TextMesh meshDoorText = gameObject.GetComponentInChildren<TextMesh>();
-
                 meshDoorText.text = "Open Door with E";
                 //Debug.Log(meshDoorText.text);
             
