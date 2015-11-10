@@ -31,7 +31,7 @@ public class PressQForInception : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (dudeStartTheBWWWAAAAAWWWSSS && counter < 1000) {
+        if (dudeStartTheBWWWAAAAAWWWSSS && counter < 2000) {
 
             gameObject.transform.Rotate(inceptionTurner * Vector3.back * Time.deltaTime, Space.Self);
             counter++;

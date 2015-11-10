@@ -15,13 +15,15 @@ public class Add_Basic_Test_sound : MonoBehaviour
 
     }
     //yo this isnt working. maybe wrong method. check doortrigger.cs
+    //this should fuccking work
+    //go back and try again
     void OnTriggerEnter(Collider camera){
         //big difference between collision and collider
-        camera.gameObject.transform.Translate(Vector3.up);
+      camera.gameObject.transform.Rotate(Vector3.forward);
 
-        Debug.Log(panaderiaStartSpeaking);
+        //Debug.Log(panaderiaStartSpeaking);
         // if (Input.GetKey(KeyCode.Comma))
-        if (camera.gameObject.name == "girl")
+        //no trigger other than body     
         {
             
             audios[0].Play();

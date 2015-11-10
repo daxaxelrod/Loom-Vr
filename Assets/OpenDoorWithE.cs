@@ -50,7 +50,7 @@ using System.Collections;
                 {
                     //lolz needs work
                     Debug.Log("got through second if. Hit this at all?");
-                    transform.RotateAround(new Vector3(-18, 0, 0), new Vector3(-17, 1, -22), Time.deltaTime * -100);
+                    transform.RotateAround(new Vector3(-8, 0, 0), new Vector3(-17, 1, -22), Time.deltaTime * -100);
                 }
                 else
                 {
