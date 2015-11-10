@@ -6,6 +6,9 @@ public class HorseRandomWalk : MonoBehaviour {
    
     public float n;
     public int randomDirection;
+    public float neigh;
+
+    
 
 
     // Use this for initialization
@@ -36,9 +39,15 @@ public class HorseRandomWalk : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
-        
-        
+        neigh = Random.value;
+     
+        //gotta be an easier way but for now this works
+        if (neigh > .999 && GetComponent<AudioSource>() != null) {
+            AudioSource yeeHaw = GetComponent<AudioSource>();
+            if (!yeeHaw.isPlaying) {
+                yeeHaw.Play();
+            }
+        }
     //maybe just declare n in global scope?
 
         //Mesh meshy = gameObject.GetComponentInChildren<Mesh>();

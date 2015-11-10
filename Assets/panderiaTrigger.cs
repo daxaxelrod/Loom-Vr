@@ -4,16 +4,16 @@ using System.Collections;
 namespace panderiaTrigger
 {
 
-    
-public class panderiaTrigger : MonoBehaviour
+
+    public class panderiaTrigger : MonoBehaviour
     {
         private OpenDoorWithE openDoorWithE;
-       
+
 
         //private Color black = new Color(0, 0, 0, 1);
         private bool hitTrigger = false;
         // private GameObject openDoorWithE;
-      //  int count = 0;
+        //  int count = 0;
 
 
 
@@ -29,7 +29,7 @@ public class panderiaTrigger : MonoBehaviour
         {
             Debug.Log("Object Entered the panderia trigger");
             hitTrigger = true;
-            
+
             //depricated
             // allowDoorOpen = true;
 
@@ -39,7 +39,7 @@ public class panderiaTrigger : MonoBehaviour
         void OnTriggerStay(Collider otherTingYouHitMan)
         {
             //Debug.Log("Still here?");
-             if (hitTrigger) { hitTrigger = false; }
+            if (hitTrigger) { hitTrigger = false; }
             else { hitTrigger = true; }
             return;
         }
@@ -49,7 +49,7 @@ public class panderiaTrigger : MonoBehaviour
             Debug.Log("Oh good you left. Ta ta for now");
             hitTrigger = false;
             return;
-             
+
         }
 
 
@@ -67,7 +67,7 @@ public class panderiaTrigger : MonoBehaviour
             //fuck
 
             //Debug.Log(openDoorWithE.enabled);
-           
+
             //Debug.Log(openDoorWithE.enabled);
 
 
@@ -89,20 +89,20 @@ public class panderiaTrigger : MonoBehaviour
             //gotta make sure to turn this off
 
             // || count <= 1
-            if (hitTrigger )
+            if (hitTrigger)
             {
 
                 //count++;
                 //gameObject.AddComponent();
-                
-                openDoorWithE.enabled = true;
-                
 
- 
+                openDoorWithE.enabled = true;
+
+
+
                 TextMesh meshDoorText = gameObject.GetComponentInChildren<TextMesh>();
                 meshDoorText.text = "Open Door with E";
                 //Debug.Log(meshDoorText.text);
-            
+
 
 
                 // TODO 
@@ -129,7 +129,7 @@ public class panderiaTrigger : MonoBehaviour
                 //sets parent                   to door ^_^    step one done
                 doorSubObject.transform.parent = gameObject.transform;
                 //have the sub object be in the exact same pos as gameobject
-              
+
 
                 //TextMesh doorTM = new TextMesh();
 
@@ -138,17 +138,17 @@ public class panderiaTrigger : MonoBehaviour
                 //create textmesh and set text
                 TextMesh doorTM = doorSubObject.GetComponent<TextMesh>();
                 //doorTM.text = "Press E to open door";
-               // doorTM.color = black;
+                // doorTM.color = black;
 
 
-                
 
 
-    
 
-               // Debug.Log(doorSubObject.transform.position.x);
-               // Debug.Log(doorSubObject.transform.position.y);
-               // Debug.Log(doorSubObject.transform.position.z);
+
+
+                // Debug.Log(doorSubObject.transform.position.x);
+                // Debug.Log(doorSubObject.transform.position.y);
+                // Debug.Log(doorSubObject.transform.position.z);
 
 
 
@@ -160,7 +160,7 @@ public class panderiaTrigger : MonoBehaviour
                 //Debug.Log(doorSubObject.transform.position.x);
                 //Debug.Log(doorSubObject.transform.position.y);
                 //Debug.Log(doorSubObject.transform.position.z);
-               
+
                 //rotate y to -90
                 doorSubObject.transform.Rotate(new Vector3(0, -90));
                 //scale x to .5
