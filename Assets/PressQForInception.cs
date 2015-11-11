@@ -4,7 +4,7 @@ using System.Collections;
 public class PressQForInception : MonoBehaviour {
 
     private bool enteredInceptionZone = false;
-    private int inceptionTurner = 5;
+    private int inceptionTurner = 10;
     bool dudeStartTheBWWWAAAAAWWWSSS = false;
     int counter = 0;
 
@@ -31,11 +31,22 @@ public class PressQForInception : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (dudeStartTheBWWWAAAAAWWWSSS && counter < 2000) {
+
+        if (dudeStartTheBWWWAAAAAWWWSSS) {
+            counter++;
+        }
+
+
+        if (dudeStartTheBWWWAAAAAWWWSSS && counter < 750) {
 
             gameObject.transform.Rotate(inceptionTurner * Vector3.back * Time.deltaTime, Space.Self);
             counter++;
             
+        }
+        if (counter > 750) {
+            // loads the new scene after the bwaaahhh finish
+        
+            Application.LoadLevel(1);
         }
    
 	}
