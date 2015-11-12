@@ -19,7 +19,7 @@ public class Add_Basic_Test_sound : MonoBehaviour
     //go back and try again
     void OnTriggerEnter(Collider camera){
         //big difference between collision and collider
-      camera.gameObject.transform.Rotate(Vector3.forward);
+      //camera.gameObject.transform.Rotate(Vector3.forward);
 
         //Debug.Log(panaderiaStartSpeaking);
         // if (Input.GetKey(KeyCode.Comma))
