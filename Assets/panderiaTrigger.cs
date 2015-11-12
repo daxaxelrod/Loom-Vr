@@ -123,20 +123,20 @@ namespace panderiaTrigger
                 //1.3 ??????????
                 //1.4 profit
 
-                GameObject doorSubObject = new GameObject();
+                // GameObject doorSubObject = new GameObject();
                 //doorSubObject.name = "Prompt Text";
 
                 //sets parent                   to door ^_^    step one done
-                doorSubObject.transform.parent = gameObject.transform;
+              //  doorSubObject.transform.parent = gameObject.transform;
                 //have the sub object be in the exact same pos as gameobject
 
 
                 //TextMesh doorTM = new TextMesh();
 
                 // add to doorsubobject
-                doorSubObject.AddComponent<TextMesh>();
+              //  doorSubObject.AddComponent<TextMesh>();
                 //create textmesh and set text
-                TextMesh doorTM = doorSubObject.GetComponent<TextMesh>();
+              //  TextMesh doorTM = doorSubObject.GetComponent<TextMesh>();
                 //doorTM.text = "Press E to open door";
                 // doorTM.color = black;
 
@@ -153,24 +153,24 @@ namespace panderiaTrigger
 
 
                 //set position AFTER everything else
-                doorSubObject.transform.position = new Vector3(4.1f,
-                                                               1.04f,
-                                                                -.72f);
+               // doorSubObject.transform.position = new Vector3(4.1f,
+                  //                                             1.04f,
+                  //                                              -.72f);
 
                 //Debug.Log(doorSubObject.transform.position.x);
                 //Debug.Log(doorSubObject.transform.position.y);
                 //Debug.Log(doorSubObject.transform.position.z);
 
                 //rotate y to -90
-                doorSubObject.transform.Rotate(new Vector3(0, -90));
+               // doorSubObject.transform.Rotate(new Vector3(0, -90));
                 //scale x to .5
-                doorSubObject.transform.lossyScale.Set(.5f, .13568f, .32527f);
+               // doorSubObject.transform.lossyScale.Set(.5f, .13568f, .32527f);
 
 
 
-                if (doorSubObject.GetComponent<TextMesh>().text == "Press E to open door")
+              //  if (doorSubObject.GetComponent<TextMesh>().text == "Press E to open door")
                 {
-                    //Debug.Log("Text matches text set in creation. Hip hip horrayyyyy!!");
+                   // Debug.Log("Text matches text set in creation. Hip hip horrayyyyy!!");
 
                 }
 

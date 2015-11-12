@@ -50,8 +50,10 @@ public class guy1speech : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         counter++;
-        Debug.Log(counter);
+       // Debug.Log(counter);
         if (counter >= 500) {
+            //WHAT THE ACTIA: FUCK
+
             // GameObject.FindGameObjectWithTag("Snow").SetActive(true);
             // snowBall.SetActive(true);
 

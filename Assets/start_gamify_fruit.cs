@@ -36,6 +36,10 @@ public class start_gamify_fruit : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (hitTrigger) {
+
+            TextMesh meshDoorText = gameObject.GetComponentInChildren<TextMesh>();
+            meshDoorText.text = "Use Space to start the game!";
+
             if (Input.GetKey(KeyCode.Space)) {
 
                 Debug.Log("in space and hittrigger if");

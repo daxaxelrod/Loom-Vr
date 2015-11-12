@@ -37,13 +37,13 @@ public class PressQForInception : MonoBehaviour {
         }
 
 
-        if (dudeStartTheBWWWAAAAAWWWSSS && counter < 1250) {
+        if (dudeStartTheBWWWAAAAAWWWSSS && counter < 375) {
 
             gameObject.transform.Rotate(inceptionTurner * Vector3.back * Time.deltaTime, Space.Self);
             counter++;
             
         }
-        if (counter > 1250) {
+        if (counter > 375) {
             // loads the new scene after the bwaaahhh finish
         
             Application.LoadLevel(2);
