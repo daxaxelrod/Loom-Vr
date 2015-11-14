@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PressQForInception : MonoBehaviour {
 
-    private bool enteredInceptionZone = false;
+   
     private int inceptionTurner = 10;
     bool dudeStartTheBWWWAAAAAWWWSSS = false;
     int counter = 0;

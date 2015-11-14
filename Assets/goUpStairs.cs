@@ -8,13 +8,14 @@ public class goUpStairs : MonoBehaviour {
 	
 	}
 
-    void OnCollisionEnter(Collision player) {
-        gameObject.transform.Translate(new Vector3(0,1,0));
+    void OnTriggerEnter(Collider player) {
+        player.transform.Translate(new Vector3(0, 1, 0));
 
     }
-	
+
+
     // Update is called once per frame
-	void Update () {
+    void Update () {
 
 	
 	}
