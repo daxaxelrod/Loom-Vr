@@ -6,6 +6,14 @@ public class GameControllerFruit : MonoBehaviour {
 
     private int superCounter = 0;
 
+    private float playerDollarEarned; // to be added to each point and displayed to player
+    private float fruitsAvailable;
+    private Vector3[] pointLocationsOfFruit;
+    private Vector3 fruitTopOfQueuePosition;
+
+   
+    
+
     private GameObject appleInstance;
     private int[] appleCounter;
 
@@ -17,6 +25,7 @@ public class GameControllerFruit : MonoBehaviour {
     private AudioSource boyAudio;
     private TextMesh guidingText;
     private Transform textObject;
+    private GameObject gameDescriptionText;
     private AudioSource gameMusic;
 
     private GameObject[] barrel;
@@ -44,9 +53,10 @@ public class GameControllerFruit : MonoBehaviour {
 
     private void transformCrate(float a, float b, float c, int crateIndex) {
         crateAcceleration = 0;
-        crate[crateIndex].transform.Translate(a, b, c);
-        if (crateAcceleration < maxCrateSpeed)
-
+        crate[crateIndex].transform.Translate(a * Time.deltaTime, b * Time.deltaTime, c*Time.deltaTime);
+        if (crateAcceleration < maxCrateSpeed) {
+            crateAcceleration += .5f;
+        }
     }
 
 
@@ -60,15 +70,82 @@ public class GameControllerFruit : MonoBehaviour {
             {
             bananaInstance = GameObject.FindGameObjectWithTag("BananaGrouping1");
             }
+
+
+        crate = GameObject.FindGameObjectsWithTag("box");
+
+
         barrel = GameObject.FindGameObjectsWithTag("barrel");
         Debug.Log(barrel);
 
         boy = GameObject.FindGameObjectWithTag("boy");
         boyAudio = boy.GetComponent<AudioSource>();
 
+        gameDescriptionText = GameObject.FindGameObjectWithTag("GameDescriptionText");
+
+        Debug.Log(gameDescriptionText);
+
+
+        
+        
+
+        // create slots that have margin for all the possible fruit values
+
+        fruitsAvailable = appleInstance.transform.childCount + bananaInstance.transform.childCount;
+        // create a vector 3 array that has all the positions
+        // initial point                           //cool syntax
+        pointLocationsOfFruit = new[] { (new Vector3(-21.14f, -5.49f, -63.45f)), new Vector3(0, 0, 0) };
+        fruitTopOfQueuePosition = pointLocationsOfFruit[0];
+
+        for (var i = 0; i < fruitsAvailable; i++)
+        {
+
+            if (i < appleInstance.transform.childCount)
+            {
+                // apples first
+               
+            }
+            else {
+                //then bananas
+                int temp = i;
+                temp -= appleInstance.transform.childCount;
+                // bananaInstance.transform.GetSiblingIndex(); //nah
+
+            }
+
+        }
+
+
+
+        // for each fruit. after they've reached a good point in the super counter
+        // moove them to the pre calculated spot in the array one at a time
+        // wait a bit between each fruit. TimeDelay???
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
-    
+   
 
     //60 fps
     // Update is called once per frame
@@ -107,6 +184,12 @@ public class GameControllerFruit : MonoBehaviour {
             //}
 
             boy.transform.Translate(new Vector3(-.5f, 0, 0) * Time.deltaTime, Space.Self);
+            if (superCounter > 50) { 
+            transformCrate(0, 0, -6, 0); // right back  
+            transformCrate(4, 0, -15, 1); // first on right
+            transformCrate(30, 0, -28, 2); // leftmost
+            }
+
 
         }
         if (superCounter > 225 && superCounter < 500 ) {
@@ -188,6 +271,11 @@ public class GameControllerFruit : MonoBehaviour {
 
             if (superCounter > 950) {
                 //transformBarrel(0,0,-barrelAcceleration*Time.deltaTime*2 ,0);
+
+            // change that gameDescitpion text to the game instructions
+            //change it to click with e to change back to instructions
+            // make it cycle back and forth between long and short text
+
             }
            
 
