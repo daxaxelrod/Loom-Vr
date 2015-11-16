@@ -38,6 +38,8 @@ public class GameControllerFruit : MonoBehaviour {
     private float crateAcceleration = 1.0f;
     private float maxCrateSpeed = 8;
 
+    private Light sun;
+
 
     private void transformBarrel(float a, float b, float c, int barrelNumber)
     {
@@ -71,6 +73,8 @@ public class GameControllerFruit : MonoBehaviour {
             bananaInstance = GameObject.FindGameObjectWithTag("BananaGrouping1");
             }
 
+        sun = GameObject.FindGameObjectWithTag("sun").GetComponent<Light>();
+        
 
         crate = GameObject.FindGameObjectsWithTag("box");
 
@@ -84,11 +88,7 @@ public class GameControllerFruit : MonoBehaviour {
         gameDescriptionText = GameObject.FindGameObjectWithTag("GameDescriptionText");
 
         Debug.Log(gameDescriptionText);
-
-
         
-        
-
         // create slots that have margin for all the possible fruit values
 
         fruitsAvailable = appleInstance.transform.childCount + bananaInstance.transform.childCount;
@@ -150,6 +150,14 @@ public class GameControllerFruit : MonoBehaviour {
     //60 fps
     // Update is called once per frame
     void Update () {
+
+        if (superCounter < 60) {
+            // go from dark to light
+            
+            if (sun.intensity < 2) {
+               sun.intensity += .02f;
+        }
+        }
 
         if (superCounter > 25 && superCounter < 60) {
             boy.transform.Rotate(Vector3.down);
@@ -232,6 +240,8 @@ public class GameControllerFruit : MonoBehaviour {
                 //if (barrelAcceleration < maxBarrelSpeed) {
                 //barrelAcceleration += .5f;
                 //}
+                appleInstance.transform.Translate(Vector3.back *3* Time.deltaTime, Space.Self);
+                bananaInstance.transform.Translate(Vector3.back *3* Time.deltaTime, Space.Self);
                 transformBarrel(-barrelAcceleration *2 * Time.deltaTime, 0, 0,1);
             }
             if (superCounter > 390 && superCounter < 450) {
@@ -253,31 +263,47 @@ public class GameControllerFruit : MonoBehaviour {
             //2.1 stage
             //fuck
             if (superCounter > 450 && superCounter < 550) {
+                appleInstance.transform.Translate(Vector3.back * 8 * Time.deltaTime, Space.Self);
+                bananaInstance.transform.Translate(Vector3.back * 8 * Time.deltaTime, Space.Self);
                 transformBarrel(-.5f, 0, 0, 3);
                 // transformBarrel(-barrelAcceleration, -.25f ,0, 2);
                 transformBarrel(0, 0, -barrelAcceleration *4 * Time.deltaTime , 4);
                 transformBarrel(barrelAcceleration*12*Time.deltaTime, 0,0,2);
                 transformBarrel((-barrelAcceleration * 5 / 4), 0, 0, 1);
 
+         
             }
-            if (superCounter >  550 && superCounter < 650) {
+            if (superCounter >  550 && superCounter < 750) {
                 //transformBarrel(0,-barrelAcceleration* 2 *Time.deltaTime, 100 ,2);
                 transformBarrel(barrelAcceleration* Time.deltaTime* 2,0,0,2);
                 // barrel 2 down needs to happen after x translataion
                 //   transformBarrel(0,-barrelAcceleration * 5f * Time.deltaTime, 0, 2); // moves the 2nd barrel forward
             
                 transformBarrel(-barrelAcceleration, 0, 0, 2);
+                
+            }
+            if (Time.fixedTime > 19 && Time.fixedTime < 25) {
+                appleInstance.transform.Translate(Vector3.down * 3 * Time.deltaTime, Space.Self);
+                bananaInstance.transform.Translate(Vector3.down * 3 * Time.deltaTime, Space.Self);
+                Debug.Log(Time.fixedTime);
+
             }
 
-            if (superCounter > 950) {
-                //transformBarrel(0,0,-barrelAcceleration*Time.deltaTime*2 ,0);
+            //transformBarrel(0,0,-barrelAcceleration*Time.deltaTime*2 ,0);
 
             // change that gameDescitpion text to the game instructions
             //change it to click with e to change back to instructions
             // make it cycle back and forth between long and short text
 
-            }
-           
+            gameDescriptionText.GetComponent<TextMesh>().text = @"
+Welcome to the fruit sorter game. Jose over here is a
+fuckwad and needs help sorting his fruit. Fruit will 
+come in front of your face. Determine if its a good fruit or
+a bad fruit and look at the right barrel. Press space to 
+launch the fruit into the barrel and earn money!";
+            gameDescriptionText.GetComponent<TextMesh>().color = Color.black;
+           // gameDescriptionText.GetComponent<TextMesh>().fontSize = 2;
+
 
 
             // Debug.Log(barrelBody);
@@ -296,7 +322,11 @@ public class GameControllerFruit : MonoBehaviour {
             //for (int i = 0; i <10 ; i++) {
 
             //}
+       
+
         }
+        
+        
         
         superCounter++;
    
