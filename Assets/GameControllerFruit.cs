@@ -41,6 +41,21 @@ public class GameControllerFruit : MonoBehaviour {
     private Light sun;
 
 
+
+    private void changeMeshText() {
+
+        gameDescriptionText.GetComponent<TextMesh>().text = @"
+Welcome to the fruit sorter game. Jose over here is a
+fuckwad and needs help sorting his fruit. Fruit will 
+come in front of your face. Determine if its a good fruit or
+a bad fruit and look at the right barrel. Press space to 
+launch the fruit into the barrel and earn money!";
+        gameDescriptionText.GetComponent<TextMesh>().color = Color.black;
+        // gameDescriptionText.GetComponent<TextMesh>().fontSize = 2;
+    }
+
+
+
     private void transformBarrel(float a, float b, float c, int barrelNumber)
     {
         barrelAcceleration = 0;
@@ -74,8 +89,6 @@ public class GameControllerFruit : MonoBehaviour {
             }
 
         sun = GameObject.FindGameObjectWithTag("sun").GetComponent<Light>();
-        
-
         crate = GameObject.FindGameObjectsWithTag("box");
 
 
@@ -120,9 +133,7 @@ public class GameControllerFruit : MonoBehaviour {
         // for each fruit. after they've reached a good point in the super counter
         // moove them to the pre calculated spot in the array one at a time
         // wait a bit between each fruit. TimeDelay???
-
         
-
 
 
 
@@ -200,7 +211,7 @@ public class GameControllerFruit : MonoBehaviour {
 
 
         }
-        if (superCounter > 225 && superCounter < 500 ) {
+        if (superCounter > 225 && superCounter < 500) {
             //tranform the fruits forward and start the boy help text.
             guidingText = boy.GetComponentInChildren<TextMesh>();
             // gameMusic = boy.GetComponentInChildren<AudioSource>();
@@ -212,14 +223,14 @@ public class GameControllerFruit : MonoBehaviour {
                 Debug.Log(gameMusic);
                 Debug.LogError("FUCK");
             }
-            
+
 
 
             guidingText.text = "Lanza las fruitas";
             appleInstance.transform.Translate(Vector3.back * Time.deltaTime, Space.Self);
             bananaInstance.transform.Translate(Vector3.back * Time.deltaTime, Space.Self);
             if (!gameMusic.isPlaying) {
-                gameMusic.Play();    
+                gameMusic.Play();
             }
 
 
@@ -240,25 +251,25 @@ public class GameControllerFruit : MonoBehaviour {
                 //if (barrelAcceleration < maxBarrelSpeed) {
                 //barrelAcceleration += .5f;
                 //}
-                appleInstance.transform.Translate(Vector3.back *3* Time.deltaTime, Space.Self);
-                bananaInstance.transform.Translate(Vector3.back *3* Time.deltaTime, Space.Self);
-                transformBarrel(-barrelAcceleration *2 * Time.deltaTime, 0, 0,1);
+                appleInstance.transform.Translate(Vector3.back * 3 * Time.deltaTime, Space.Self);
+                bananaInstance.transform.Translate(Vector3.back * 3 * Time.deltaTime, Space.Self);
+                transformBarrel(-barrelAcceleration * 2 * Time.deltaTime, 0, 0, 1);
             }
             if (superCounter > 390 && superCounter < 450) {
-                transformBarrel(0, -barrelAcceleration * 4.8f * Time.deltaTime , 0, 1);
+                transformBarrel(0, -barrelAcceleration * 4.8f * Time.deltaTime, 0, 1);
                 //barrelAcceleration = 0;
                 //barrel.transform.Translate(0, -barrelAcceleration * Time.deltaTime / 4, 0);
                 //if (barrelAcceleration < maxBarrelSpeed) {
                 //    barrelAcceleration += .5f;
                 //}
-                
+
                 //subtract from the z of barrel 2
-                transformBarrel(0,0,-barrelAcceleration * 3f * Time.deltaTime, 2);
-                
+                transformBarrel(0, 0, -barrelAcceleration * 3f * Time.deltaTime, 2);
+
 
             }
             // 2nd stage
-            
+
 
             //2.1 stage
             //fuck
@@ -267,20 +278,20 @@ public class GameControllerFruit : MonoBehaviour {
                 bananaInstance.transform.Translate(Vector3.back * 8 * Time.deltaTime, Space.Self);
                 transformBarrel(-.5f, 0, 0, 3);
                 // transformBarrel(-barrelAcceleration, -.25f ,0, 2);
-                transformBarrel(0, 0, -barrelAcceleration *4 * Time.deltaTime , 4);
-                transformBarrel(barrelAcceleration*12*Time.deltaTime, 0,0,2);
+                transformBarrel(0, 0, -barrelAcceleration * 4 * Time.deltaTime, 4);
+                transformBarrel(barrelAcceleration * 12 * Time.deltaTime, 0, 0, 2);
                 transformBarrel((-barrelAcceleration * 5 / 4), 0, 0, 1);
 
-         
+
             }
-            if (superCounter >  550 && superCounter < 750) {
+            if (superCounter > 550 && superCounter < 750) {
                 //transformBarrel(0,-barrelAcceleration* 2 *Time.deltaTime, 100 ,2);
-                transformBarrel(barrelAcceleration* Time.deltaTime* 2,0,0,2);
+                transformBarrel(barrelAcceleration * Time.deltaTime * 2, 0, 0, 2);
                 // barrel 2 down needs to happen after x translataion
                 //   transformBarrel(0,-barrelAcceleration * 5f * Time.deltaTime, 0, 2); // moves the 2nd barrel forward
-            
+
                 transformBarrel(-barrelAcceleration, 0, 0, 2);
-                
+
             }
             if (Time.fixedTime > 19 && Time.fixedTime < 25) {
                 appleInstance.transform.Translate(Vector3.down * 3 * Time.deltaTime, Space.Self);
@@ -294,15 +305,12 @@ public class GameControllerFruit : MonoBehaviour {
             // change that gameDescitpion text to the game instructions
             //change it to click with e to change back to instructions
             // make it cycle back and forth between long and short text
+            
 
-            gameDescriptionText.GetComponent<TextMesh>().text = @"
-Welcome to the fruit sorter game. Jose over here is a
-fuckwad and needs help sorting his fruit. Fruit will 
-come in front of your face. Determine if its a good fruit or
-a bad fruit and look at the right barrel. Press space to 
-launch the fruit into the barrel and earn money!";
-            gameDescriptionText.GetComponent<TextMesh>().color = Color.black;
-           // gameDescriptionText.GetComponent<TextMesh>().fontSize = 2;
+            if (Input.GetMouseButton(0)) {
+                changeMeshText();
+            }
+
 
 
 
