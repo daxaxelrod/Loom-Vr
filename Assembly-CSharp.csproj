@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Add_Basic_Test_sound.cs" />
      <Compile Include="Assets\EuroCounterMainOVR.cs" />
+     <Compile Include="Assets\FurnatureStorescene.cs" />
      <Compile Include="Assets\GameControllerFruit.cs" />
      <Compile Include="Assets\GirlMovement.cs" />
      <Compile Include="Assets\HorseRandomWalk.cs" />

@@ -1,29 +1,5 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-7356
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-7612
 Cmd: getPlatforms
 Cmd: compileSnippet
-  api=4 type=0 insize=6303 outsize=1501 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6303 outsize=754 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=2 insize=6303 outsize=7928 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=3 insize=6303 outsize=3069 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=751 outsize=1420 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=751 outsize=624 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=934 outsize=4938 kw=POINT SHADOWS_CUBE SHADOWS_SOFT pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=934 outsize=7416 kw=POINT SHADOWS_CUBE SHADOWS_SOFT pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=577 outsize=1420 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=577 outsize=697 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=7251 outsize=7303 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=7251 outsize=2956 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=7251 outsize=5889 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+  api=4 type=0 insize=7251 outsize=6945 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
