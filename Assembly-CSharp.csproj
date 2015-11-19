@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Add_Basic_Test_sound.cs" />
+     <Compile Include="Assets\EuroCounterMainOVR.cs" />
      <Compile Include="Assets\GameControllerFruit.cs" />
      <Compile Include="Assets\GirlMovement.cs" />
      <Compile Include="Assets\HorseRandomWalk.cs" />
@@ -108,6 +109,7 @@
      <Compile Include="Assets\panderiaTrigger.cs" />
      <Compile Include="Assets\poopItself.cs" />
      <Compile Include="Assets\start_gamify_fruit.cs" />
+     <Compile Include="Assets\testScipttodestrot.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
