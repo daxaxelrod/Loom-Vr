@@ -111,6 +111,7 @@
      <Compile Include="Assets\poopItself.cs" />
      <Compile Include="Assets\start_gamify_fruit.cs" />
      <Compile Include="Assets\testScipttodestrot.cs" />
+     <Compile Include="Assets\translateBasedOnLanguageType.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
