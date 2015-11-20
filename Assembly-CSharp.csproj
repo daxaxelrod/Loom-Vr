@@ -109,6 +109,7 @@
      <Compile Include="Assets\guy1speech.cs" />
      <Compile Include="Assets\panderiaTrigger.cs" />
      <Compile Include="Assets\poopItself.cs" />
+     <Compile Include="Assets\preventCameraFromWallClip.cs" />
      <Compile Include="Assets\start_gamify_fruit.cs" />
      <Compile Include="Assets\testScipttodestrot.cs" />
      <Compile Include="Assets\translateBasedOnLanguageType.cs" />

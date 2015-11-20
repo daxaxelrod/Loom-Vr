@@ -91,9 +91,8 @@ public class Translate_and_jump : MonoBehaviour
 
     void Update()
     {
-
-
-    gameObject.
+        // camera stays put after every scene
+        Object.DontDestroyOnLoad(gameObject);
 
         if (Input.GetKey(KeyCode.R)) {
             Debug.Log("Hit BEFORE recenter pose");
@@ -137,7 +136,7 @@ public class Translate_and_jump : MonoBehaviour
 
 
     }
-
+    
     public void ResetOrientation()
     {
         if (HmdResetsY)
@@ -192,7 +191,7 @@ public class Translate_and_jump : MonoBehaviour
 
         }
 
-
+        
     }
 
 
