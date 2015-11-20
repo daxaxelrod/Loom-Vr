@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EuroCounterMainOVR : MonoBehaviour {
 
-    public double euros = 0;
+    public decimal euros = 0.00m;
     private TextMesh euroCounterText;
 
 	// Use this for initialization
@@ -14,12 +14,21 @@ public class EuroCounterMainOVR : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (euros != 0)
+        if (euros == 0)
         {
-            // say they have the updated euro count
+            euroCounterText.text = "You have no money";
+            
+            
         }
         else {
+            euroCounterText.text= "You have " + euros.ToString() + " Euros";
+            //update the text with current dollar ammount 
             // get the text in the child text mesh
+        }
+
+        if (Input.GetKey(KeyCode.B)) {
+            euros += 1;
+            
         }
 	
 	}

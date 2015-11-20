@@ -92,6 +92,9 @@ public class Translate_and_jump : MonoBehaviour
     void Update()
     {
 
+
+    gameObject.
+
         if (Input.GetKey(KeyCode.R)) {
             Debug.Log("Hit BEFORE recenter pose");
             OVRManager.display.RecenterPose();
