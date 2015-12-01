@@ -107,6 +107,7 @@
      <Compile Include="Assets\function.cs" />
      <Compile Include="Assets\goUpStairs.cs" />
      <Compile Include="Assets\guy1speech.cs" />
+     <Compile Include="Assets\loadNewComponenet.cs" />
      <Compile Include="Assets\panderiaTrigger.cs" />
      <Compile Include="Assets\poopItself.cs" />
      <Compile Include="Assets\preventCameraFromWallClip.cs" />

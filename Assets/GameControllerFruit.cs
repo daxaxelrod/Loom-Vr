@@ -2,7 +2,8 @@
 using System.Collections;
 
 
-public class GameControllerFruit : MonoBehaviour {
+public class GameControllerFruit : MonoBehaviour
+{
 
     private int superCounter = 0;
 
@@ -11,8 +12,8 @@ public class GameControllerFruit : MonoBehaviour {
     private Vector3[] pointLocationsOfFruit;
     private Vector3 fruitTopOfQueuePosition;
 
-   
-    
+
+
 
     private GameObject appleInstance;
     private int[] appleCounter;
@@ -42,7 +43,8 @@ public class GameControllerFruit : MonoBehaviour {
 
 
 
-    private void changeMeshText() {
+    private void changeMeshText()
+    {
 
         gameDescriptionText.GetComponent<TextMesh>().text = @"
 Welcome to the fruit sorter game. Jose over here is a
@@ -68,25 +70,29 @@ launch the fruit into the barrel and earn money!";
 
     }
 
-    private void transformCrate(float a, float b, float c, int crateIndex) {
+    private void transformCrate(float a, float b, float c, int crateIndex)
+    {
         crateAcceleration = 0;
-        crate[crateIndex].transform.Translate(a * Time.deltaTime, b * Time.deltaTime, c*Time.deltaTime);
-        if (crateAcceleration < maxCrateSpeed) {
+        crate[crateIndex].transform.Translate(a * Time.deltaTime, b * Time.deltaTime, c * Time.deltaTime);
+        if (crateAcceleration < maxCrateSpeed)
+        {
             crateAcceleration += .5f;
         }
     }
 
 
     // Use this for initialization
-    void Start () {
-            if(appleInstance == null) {
+    void Start()
+    {
+        if (appleInstance == null)
+        {
             appleInstance = GameObject.FindGameObjectWithTag("AppleGrouping1");
-            }
+        }
 
-            if (bananaInstance == null)
-            {
+        if (bananaInstance == null)
+        {
             bananaInstance = GameObject.FindGameObjectWithTag("BananaGrouping1");
-            }
+        }
 
         sun = GameObject.FindGameObjectWithTag("sun").GetComponent<Light>();
         crate = GameObject.FindGameObjectsWithTag("box");
@@ -101,7 +107,7 @@ launch the fruit into the barrel and earn money!";
         gameDescriptionText = GameObject.FindGameObjectWithTag("GameDescriptionText");
 
         Debug.Log(gameDescriptionText);
-        
+
         // create slots that have margin for all the possible fruit values
 
         fruitsAvailable = appleInstance.transform.childCount + bananaInstance.transform.childCount;
@@ -116,9 +122,10 @@ launch the fruit into the barrel and earn money!";
             if (i < appleInstance.transform.childCount)
             {
                 // apples first
-               
+
             }
-            else {
+            else
+            {
                 //then bananas
                 int temp = i;
                 temp -= appleInstance.transform.childCount;
@@ -133,7 +140,7 @@ launch the fruit into the barrel and earn money!";
         // for each fruit. after they've reached a good point in the super counter
         // moove them to the pre calculated spot in the array one at a time
         // wait a bit between each fruit. TimeDelay???
-        
+
 
 
 
@@ -156,36 +163,42 @@ launch the fruit into the barrel and earn money!";
 
     }
 
-   
+
 
     //60 fps
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
-        if (superCounter < 60) {
+        if (superCounter < 60)
+        {
             // go from dark to light
-            
-            if (sun.intensity < 2) {
-               sun.intensity += .02f;
-        }
+
+            if (sun.intensity < 2)
+            {
+                sun.intensity += .02f;
+            }
         }
 
-        if (superCounter > 25 && superCounter < 60) {
+        if (superCounter > 25 && superCounter < 60)
+        {
             boy.transform.Rotate(Vector3.down);
-        } 
-        if (!boyAudio.isPlaying && superCounter == 0) {
+        }
+        if (!boyAudio.isPlaying && superCounter == 0)
+        {
             boyAudio.Play();
-            }
-            
-        
+        }
+
+
         //note to self this is super taxing and all the fruits should be in their own respective parents
 
-        if (superCounter < 225){
+        if (superCounter < 225)
+        {
 
             appleInstance.transform.Translate(new Vector3(0, 1, 0) * Time.deltaTime, Space.Self);
             bananaInstance.transform.Translate(new Vector3(0, 1, 0) * Time.deltaTime, Space.Self);
 
-          //  bananaInstance.trans
+            //  bananaInstance.trans
 
             //for (int i = 0; i < appleInstance.Length; i++)
             //{
@@ -203,22 +216,25 @@ launch the fruit into the barrel and earn money!";
             //}
 
             boy.transform.Translate(new Vector3(-.5f, 0, 0) * Time.deltaTime, Space.Self);
-            if (superCounter > 50) { 
-            transformCrate(0, 0, -6, 0); // right back  
-            transformCrate(4, 0, -15, 1); // first on right
-            transformCrate(30, 0, -28, 2); // leftmost
+            if (superCounter > 50)
+            {
+                transformCrate(0, 0, -6, 0); // right back  
+                transformCrate(4, 0, -15, 1); // first on right
+                transformCrate(30, 0, -28, 2); // leftmost
             }
 
 
         }
-        if (superCounter > 225 && superCounter < 500) {
+        if (superCounter > 225 && superCounter < 500)
+        {
             //tranform the fruits forward and start the boy help text.
             guidingText = boy.GetComponentInChildren<TextMesh>();
             // gameMusic = boy.GetComponentInChildren<AudioSource>();
             textObject = boy.transform.FindChild("gameText");
             gameMusic = textObject.GetComponent<AudioSource>();
 
-            if (gameMusic.name == "fruit_guyopeninggame") {
+            if (gameMusic.name == "fruit_guyopeninggame")
+            {
 
                 Debug.Log(gameMusic);
                 Debug.LogError("FUCK");
@@ -229,7 +245,8 @@ launch the fruit into the barrel and earn money!";
             guidingText.text = "Lanza las fruitas";
             appleInstance.transform.Translate(Vector3.back * Time.deltaTime, Space.Self);
             bananaInstance.transform.Translate(Vector3.back * Time.deltaTime, Space.Self);
-            if (!gameMusic.isPlaying) {
+            if (!gameMusic.isPlaying)
+            {
                 gameMusic.Play();
             }
 
@@ -245,7 +262,8 @@ launch the fruit into the barrel and earn money!";
 
 
 
-            if (superCounter < 390) {
+            if (superCounter < 390)
+            {
                 //barrelBody = barrel.GetComponent<Rigidbody>();
                 //barrel.transform.Translate(-barrelAcceleration * Time.deltaTime / 4, 0, 0);
                 //if (barrelAcceleration < maxBarrelSpeed) {
@@ -255,7 +273,8 @@ launch the fruit into the barrel and earn money!";
                 bananaInstance.transform.Translate(Vector3.back * 3 * Time.deltaTime, Space.Self);
                 transformBarrel(-barrelAcceleration * 2 * Time.deltaTime, 0, 0, 1);
             }
-            if (superCounter > 390 && superCounter < 450) {
+            if (superCounter > 390 && superCounter < 450)
+            {
                 transformBarrel(0, -barrelAcceleration * 4.8f * Time.deltaTime, 0, 1);
                 //barrelAcceleration = 0;
                 //barrel.transform.Translate(0, -barrelAcceleration * Time.deltaTime / 4, 0);
@@ -273,7 +292,8 @@ launch the fruit into the barrel and earn money!";
 
             //2.1 stage
             //fuck
-            if (superCounter > 450 && superCounter < 550) {
+            if (superCounter > 450 && superCounter < 550)
+            {
                 appleInstance.transform.Translate(Vector3.back * 8 * Time.deltaTime, Space.Self);
                 bananaInstance.transform.Translate(Vector3.back * 8 * Time.deltaTime, Space.Self);
                 transformBarrel(-.5f, 0, 0, 3);
@@ -284,7 +304,8 @@ launch the fruit into the barrel and earn money!";
 
 
             }
-            if (superCounter > 550 && superCounter < 750) {
+            if (superCounter > 550 && superCounter < 750)
+            {
                 //transformBarrel(0,-barrelAcceleration* 2 *Time.deltaTime, 100 ,2);
                 transformBarrel(barrelAcceleration * Time.deltaTime * 2, 0, 0, 2);
                 // barrel 2 down needs to happen after x translataion
@@ -293,7 +314,8 @@ launch the fruit into the barrel and earn money!";
                 transformBarrel(-barrelAcceleration, 0, 0, 2);
 
             }
-            if (Time.fixedTime > 19 && Time.fixedTime < 25) {
+            if (Time.fixedTime > 19 && Time.fixedTime < 25)
+            {
                 appleInstance.transform.Translate(Vector3.down * 3 * Time.deltaTime, Space.Self);
                 bananaInstance.transform.Translate(Vector3.down * 3 * Time.deltaTime, Space.Self);
                 Debug.Log(Time.fixedTime);
@@ -305,9 +327,10 @@ launch the fruit into the barrel and earn money!";
             // change that gameDescitpion text to the game instructions
             //change it to click with e to change back to instructions
             // make it cycle back and forth between long and short text
-            
 
-            if (Input.GetMouseButton(0)) {
+
+            if (Input.GetMouseButton(0))
+            {
                 changeMeshText();
             }
 
@@ -330,14 +353,14 @@ launch the fruit into the barrel and earn money!";
             //for (int i = 0; i <10 ; i++) {
 
             //}
-       
+
 
         }
-        
-        
-        
+
+
+
         superCounter++;
-   
+
 
 
     }
