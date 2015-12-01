@@ -18,7 +18,7 @@ public class BuyTable : MonoBehaviour {
     void Start () {
         tableTextMesh = gameObject.GetComponentInChildren<TextMesh>();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         if (hitTrigger) {
@@ -28,11 +28,12 @@ public class BuyTable : MonoBehaviour {
                 tableTextMesh.text = "Are you sure?";
                 if (Input.GetKey(KeyCode.Return)) {
                     tableTextMesh.text = "Enjoy!!";
+                    hitTrigger = false;
                     // add table to the backpack
                   //  gameObject.transform.FindChild("table")
                 }
             }
         }
-	
+
 	}
 }
