@@ -21,18 +21,24 @@ public class BuyTable : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (hitTrigger) {
+        if (hitTrigger)
+        {
             tableTextMesh.text = "If you'd like to buy this table\n press enter";
-            if (Input.GetKey(KeyCode.Return)) {
+            if (Input.GetKey(KeyCode.Return))
+            {
                 //message
                 tableTextMesh.text = "Are you sure?";
-                if (Input.GetKey(KeyCode.Return)) {
+                if (Input.GetKey(KeyCode.Return))
+                {
                     tableTextMesh.text = "Enjoy!!";
-                    hitTrigger = false;
+                    //   hitTrigger = false;
                     // add table to the backpack
-                  //  gameObject.transform.FindChild("table")
+                    //  gameObject.transform.FindChild("table")
                 }
             }
+        }
+        else {
+            tableTextMesh.text = "";
         }
 
 	}
