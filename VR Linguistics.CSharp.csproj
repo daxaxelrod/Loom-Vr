@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Add_Basic_Test_sound.cs" />
+    <Compile Include="Assets\BackToMainScene.cs" />
     <Compile Include="Assets\BuyChairScript.cs" />
     <Compile Include="Assets\BuySpeaker.cs" />
     <Compile Include="Assets\BuyTable.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="Assets\poopItself.cs" />
     <Compile Include="Assets\preventCameraFromWallClip.cs" />
     <Compile Include="Assets\start_gamify_fruit.cs" />
+    <Compile Include="Assets\testForshyjab.cs" />
     <Compile Include="Assets\testScipttodestrot.cs" />
     <Compile Include="Assets\translateBasedOnLanguageType.cs" />
   </ItemGroup>

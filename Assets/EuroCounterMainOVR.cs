@@ -5,12 +5,25 @@ public class EuroCounterMainOVR : MonoBehaviour {
 
     public decimal euros = 0.00m;
     private TextMesh euroCounterText;
+    public ArrayList possesions;
+
 
 	// Use this for initialization
 	void Start () {
         euroCounterText = gameObject.GetComponentInChildren<TextMesh>();
-        
-	}
+
+        // create backpack
+        //nope not add
+        //possesions.Add();
+
+        GameObject map = Instantiate(Resources.Load("David_Objects_Prefabs", typeof(GameObject))) as GameObject;
+
+    }
+
+
+
+
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,10 +39,11 @@ public class EuroCounterMainOVR : MonoBehaviour {
             // get the text in the child text mesh
         }
 
-        if (Input.GetKey(KeyCode.B)) {
-            euros += 1;
+        // debug
+        //  if (Input.GetKey(KeyCode.B)) {
+        //    euros += 1;
             
-        }
+        //}
 	
 	}
 }
