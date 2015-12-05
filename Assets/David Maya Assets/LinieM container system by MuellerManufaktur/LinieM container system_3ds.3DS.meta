@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 5698db564a4b4c24e8dcceba396f85fc
+timeCreated: 1449282286
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: File hol10
+    100002: File hold0
+    100004: File hold1
+    100006: File hold2
+    100008: File hold3
+    100010: File hold4
+    100012: File hold5
+    100014: File hold6
+    100016: File hold7
+    100018: File hold8
+    100020: File hold9
+    100022: File holde
+    100024: //RootNode
+    100026: LinieM ta0
+    100028: LinieM ta1
+    100030: LinieM ta2
+    100032: LinieM ta3
+    100034: LinieM ta4
+    100036: LinieM ta5
+    100038: LinieM ta6
+    100040: LinieM ta7
+    100042: LinieM ta8
+    100044: LinieM tab
+    400000: File hol10
+    400002: File hold0
+    400004: File hold1
+    400006: File hold2
+    400008: File hold3
+    400010: File hold4
+    400012: File hold5
+    400014: File hold6
+    400016: File hold7
+    400018: File hold8
+    400020: File hold9
+    400022: File holde
+    400024: //RootNode
+    400026: LinieM ta0
+    400028: LinieM ta1
+    400030: LinieM ta2
+    400032: LinieM ta3
+    400034: LinieM ta4
+    400036: LinieM ta5
+    400038: LinieM ta6
+    400040: LinieM ta7
+    400042: LinieM ta8
+    400044: LinieM tab
+    2300000: File hol10
+    2300002: File hold0
+    2300004: File hold1
+    2300006: File hold2
+    2300008: File hold3
+    2300010: File hold4
+    2300012: File hold5
+    2300014: File hold6
+    2300016: File hold7
+    2300018: File hold8
+    2300020: File hold9
+    2300022: File holde
+    2300024: LinieM ta0
+    2300026: LinieM ta1
+    2300028: LinieM ta2
+    2300030: LinieM ta3
+    2300032: LinieM ta4
+    2300034: LinieM ta5
+    2300036: LinieM ta6
+    2300038: LinieM ta7
+    2300040: LinieM ta8
+    2300042: LinieM tab
+    3300000: File hol10
+    3300002: File hold0
+    3300004: File hold1
+    3300006: File hold2
+    3300008: File hold3
+    3300010: File hold4
+    3300012: File hold5
+    3300014: File hold6
+    3300016: File hold7
+    3300018: File hold8
+    3300020: File hold9
+    3300022: File holde
+    3300024: LinieM ta0
+    3300026: LinieM ta1
+    3300028: LinieM ta2
+    3300030: LinieM ta3
+    3300032: LinieM ta4
+    3300034: LinieM ta5
+    3300036: LinieM ta6
+    3300038: LinieM ta7
+    3300040: LinieM ta8
+    3300042: LinieM tab
+    4300000: LinieM tab
+    4300002: LinieM ta0
+    4300004: LinieM ta1
+    4300006: LinieM ta2
+    4300008: File holde
+    4300010: File hold0
+    4300012: LinieM ta3
+    4300014: LinieM ta4
+    4300016: LinieM ta5
+    4300018: LinieM ta6
+    4300020: LinieM ta7
+    4300022: LinieM ta8
+    4300024: File hold5
+    4300026: File hold6
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

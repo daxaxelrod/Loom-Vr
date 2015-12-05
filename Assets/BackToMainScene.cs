@@ -33,6 +33,7 @@ public class BackToMainScene : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(hitTrigger);
         if (hitTrigger)
         {
             // append a child with the text mesh
@@ -40,7 +41,8 @@ public class BackToMainScene : MonoBehaviour {
             //   TextMesh refrencedTextMesh = textToLeave.GetComponent<TextMesh>();
             // append the correct text,
             referencedTextMesh.text = "Press enter to return to mardid";
-            if (Input.GetKey(KeyCode.Return)) {
+            if (Input.GetKey(KeyCode.Return))
+            {
                 referencedTextMesh.text = "Hold on to your hats!!";
                 Application.LoadLevel(0);
             }
@@ -48,7 +50,11 @@ public class BackToMainScene : MonoBehaviour {
             // load the new scene
 
             // hitTrigger = false;
-            
+
+        }
+        else {
+                                    // maybe to flash in future??
+            referencedTextMesh.text = "Leave";
         }
 
 

@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: 938b55b5f89622e4d867f85eae5d00a0
+timeCreated: 1449282288
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: File holder_01
+    100002: File holder_01_ring
+    100004: File holder_01_ring01
+    100006: File holder_02
+    100008: File holder_02_ring
+    100010: File holder_02_ring01
+    100012: File holder_03
+    100014: File holder_03_ring
+    100016: File holder_03_ring01
+    100018: File holder_04
+    100020: File holder_05
+    100022: File holder_06
+    100024: //RootNode
+    100026: LinieM table system 240cm_frame
+    100028: LinieM table system 240cm_table top
+    100030: LinieM table system container_door
+    100032: LinieM table system container_door02
+    100034: LinieM table system container_frame02
+    100036: LinieM table system container_frame_
+    100038: LinieM table system container_stoppers
+    100040: LinieM table system container_stoppers01
+    100042: LinieM table system_legs
+    100044: LinieM table system_stoppers
+    400000: File holder_01
+    400002: File holder_01_ring
+    400004: File holder_01_ring01
+    400006: File holder_02
+    400008: File holder_02_ring
+    400010: File holder_02_ring01
+    400012: File holder_03
+    400014: File holder_03_ring
+    400016: File holder_03_ring01
+    400018: File holder_04
+    400020: File holder_05
+    400022: File holder_06
+    400024: //RootNode
+    400026: LinieM table system 240cm_frame
+    400028: LinieM table system 240cm_table top
+    400030: LinieM table system container_door
+    400032: LinieM table system container_door02
+    400034: LinieM table system container_frame02
+    400036: LinieM table system container_frame_
+    400038: LinieM table system container_stoppers
+    400040: LinieM table system container_stoppers01
+    400042: LinieM table system_legs
+    400044: LinieM table system_stoppers
+    2300000: File holder_01
+    2300002: File holder_01_ring
+    2300004: File holder_01_ring01
+    2300006: File holder_02
+    2300008: File holder_02_ring
+    2300010: File holder_02_ring01
+    2300012: File holder_03
+    2300014: File holder_03_ring
+    2300016: File holder_03_ring01
+    2300018: File holder_04
+    2300020: File holder_05
+    2300022: File holder_06
+    2300024: LinieM table system 240cm_frame
+    2300026: LinieM table system 240cm_table top
+    2300028: LinieM table system container_door
+    2300030: LinieM table system container_door02
+    2300032: LinieM table system container_frame02
+    2300034: LinieM table system container_frame_
+    2300036: LinieM table system container_stoppers
+    2300038: LinieM table system container_stoppers01
+    2300040: LinieM table system_legs
+    2300042: LinieM table system_stoppers
+    3300000: File holder_01
+    3300002: File holder_01_ring
+    3300004: File holder_01_ring01
+    3300006: File holder_02
+    3300008: File holder_02_ring
+    3300010: File holder_02_ring01
+    3300012: File holder_03
+    3300014: File holder_03_ring
+    3300016: File holder_03_ring01
+    3300018: File holder_04
+    3300020: File holder_05
+    3300022: File holder_06
+    3300024: LinieM table system 240cm_frame
+    3300026: LinieM table system 240cm_table top
+    3300028: LinieM table system container_door
+    3300030: LinieM table system container_door02
+    3300032: LinieM table system container_frame02
+    3300034: LinieM table system container_frame_
+    3300036: LinieM table system container_stoppers
+    3300038: LinieM table system container_stoppers01
+    3300040: LinieM table system_legs
+    3300042: LinieM table system_stoppers
+    4300000: LinieM table system container_door
+    4300002: LinieM table system container_frame_
+    4300004: LinieM table system_stoppers
+    4300006: LinieM table system container_stoppers
+    4300008: File holder_01
+    4300010: File holder_01_ring
+    4300012: File holder_02_ring
+    4300014: File holder_02
+    4300016: File holder_03_ring
+    4300018: File holder_03
+    4300020: LinieM table system 240cm_frame
+    4300022: LinieM table system_legs
+    4300024: LinieM table system 240cm_table top
+    4300026: LinieM table system container_door02
+    4300028: LinieM table system container_frame02
+    4300030: LinieM table system container_stoppers01
+    4300032: File holder_04
+    4300034: File holder_01_ring01
+    4300036: File holder_02_ring01
+    4300038: File holder_05
+    4300040: File holder_03_ring01
+    4300042: File holder_06
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
