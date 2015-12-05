@@ -12,9 +12,6 @@ public class GameControllerFruit : MonoBehaviour
     private Vector3[] pointLocationsOfFruit;
     private Vector3 fruitTopOfQueuePosition;
 
-
-
-
     private GameObject appleInstance;
     private int[] appleCounter;
 
