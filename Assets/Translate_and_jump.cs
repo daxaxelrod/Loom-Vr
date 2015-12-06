@@ -34,9 +34,7 @@ public class Translate_and_jump : MonoBehaviour
     private bool tankOrViewMovement = false; // allows the user to switch between tank like movement and
                                              // vision based movement. True is tank, false is vision
 
-
-
-
+//    private GameObject m_CameraLeft = null;
 
 
 
@@ -80,6 +78,10 @@ public class Translate_and_jump : MonoBehaviour
     //gets current head pos and stores it in a vector; also gets current head orientation and stores it in a quaternion
     public Vector3 currentPosition = OVRPose.identity.position;
     public Quaternion currentOrientaion = OVRPose.identity.orientation;
+
+    // pitch, yaw
+    private float yaw;
+    private float pitch;
 
 
     void Start() {
@@ -125,7 +127,7 @@ public class Translate_and_jump : MonoBehaviour
             //osselate
 
             transform.Translate(new Vector3(0, 1, 0) * moveTheGodDamnSphere * Time.deltaTime, Space.Self);
-
+            
 
         }
 
@@ -213,6 +215,9 @@ public class Translate_and_jump : MonoBehaviour
 
             userHeadEuler.y = 0;
 
+            yaw += gameObject.transform.localRotation.eulerAngles.y;
+            pitch += gameObject.transform.localRotation.eulerAngles.x;
+
            // Quaternion localEuler = Quaternion.AngleAxis(userHeadEuler.x, userHeadQuaternion);
             
 
@@ -232,9 +237,20 @@ public class Translate_and_jump : MonoBehaviour
             gameObject.transform.ToOVRPose(true);
 
 
+            //julis solution attempt
+            // clamp angles
+            yaw = yaw  < -360.0f ? yaw  + 360.0f : yaw;
+            yaw = yaw > 360.0f ? yaw - 360.0f : yaw;
 
-
-
+                                    // set the limit in a tuple (x,y
+            // yaw = Mathf.Clamp(yaw, RotationYawLimit.x, RotationYawLimit.y);
+            yaw = Mathf.Clamp(yaw, 15, 15);
+            pitch = pitch < -360.0f ? pitch + 360.0f : pitch;
+            pitch = pitch > 360.0f ? pitch - 360.0f : pitch;
+            if (pitch < 90 && pitch> 70)
+                pitch = 70;
+            else if (pitch > 90 && pitch< 280)
+                pitch = 280;
 
 
         }

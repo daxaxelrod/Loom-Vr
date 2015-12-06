@@ -137,6 +137,7 @@
     <Compile Include="Assets\Translate_and_jump.cs" />
     <Compile Include="Assets\addSelectorFruit.cs" />
     <Compile Include="Assets\bankenterTrigger.cs" />
+    <Compile Include="Assets\changeClockTime.cs" />
     <Compile Include="Assets\function.cs" />
     <Compile Include="Assets\goDownSecretStairs.cs" />
     <Compile Include="Assets\goUpStairs.cs" />

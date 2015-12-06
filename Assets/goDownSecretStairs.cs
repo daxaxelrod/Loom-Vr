@@ -5,12 +5,11 @@ public class goDownSecretStairs : MonoBehaviour {
 
     private bool hitTrigger = false;
     private int stepCount;
+    private GameObject floor;
 
     void OnTriggerEnter(Collider player) {
         hitTrigger = true;
-
-
-    }
+        }
 
     void OnTriggerExit() {
         hitTrigger = false;
@@ -22,7 +21,7 @@ public class goDownSecretStairs : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         stepCount = gameObject.transform.childCount;
-
+        // floor =  gameObject.transform.parent
 	}
 	
 	// Update is called once per frame
@@ -32,6 +31,7 @@ public class goDownSecretStairs : MonoBehaviour {
                 // run the incrementing transform in here
                 GameObject rig = GameObject.FindGameObjectWithTag("MainCamera");
                 rig.transform.Translate(new Vector3(0, -1 * Time.deltaTime, 0));
+                // need to figure out a better way to sleep the screen
 
             }
         }

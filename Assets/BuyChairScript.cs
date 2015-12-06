@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+// using 
 
 public class BuyChairScript : MonoBehaviour {
 
@@ -10,8 +11,7 @@ public class BuyChairScript : MonoBehaviour {
     void OnTriggerEnter(Collider player) {
         hitTrigger = true;
     }
-
-
+    
     void OnTriggerExit(Collider player) {
         hitTrigger = false;
     }
@@ -19,6 +19,7 @@ public class BuyChairScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
            chairBuyTextMesh = gameObject.GetComponentInChildren<TextMesh>();
+
     }
 
     private void ChangeTextMesh(string textToChangeTo) {
@@ -35,11 +36,17 @@ public class BuyChairScript : MonoBehaviour {
 
             {
                 //warning message
-                ChangeTextMesh("Are you sure? \n press y to continue");
+                ChangeTextMesh("Are you sure? \n press enter to continue");
                 // isKeyPressed = true;
                 // set it so it doesn't trigger the event
                 if (Input.GetKey(KeyCode.Return))
                 {
+
+                    // meathods for adding to backpack
+                  //  addToBackPack(gameObject);
+
+                    
+
                     ChangeTextMesh("It's all yours!");
                 }
 
