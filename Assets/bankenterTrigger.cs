@@ -30,7 +30,7 @@ public class bankenterTrigger : MonoBehaviour {
     public void openDoorAndLoadBankGame()
     {
         if (bankCounter == 1) {
-         //   new WaitForSeconds(4);
+            new WaitForSeconds(4);
             Application.LoadLevel(3);
             Debug.Log("Loading new level");
         }
