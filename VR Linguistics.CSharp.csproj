@@ -133,6 +133,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\SeeingIsBelieving.cs" />
+    <Compile Include="Assets\StartBankLogic.cs" />
     <Compile Include="Assets\StopCameraMovement.cs" />
     <Compile Include="Assets\Translate_and_jump.cs" />
     <Compile Include="Assets\addSelectorFruit.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="Assets\poopItself.cs" />
     <Compile Include="Assets\preventCameraFromWallClip.cs" />
     <Compile Include="Assets\start_gamify_fruit.cs" />
+    <Compile Include="Assets\tentCityAdditive.cs" />
     <Compile Include="Assets\testForshyjab.cs" />
     <Compile Include="Assets\testScipttodestrot.cs" />
     <Compile Include="Assets\translateBasedOnLanguageType.cs" />
