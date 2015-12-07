@@ -22,8 +22,7 @@ public class bankenterTrigger : MonoBehaviour {
     
 	// Update is called once per frame
 	void Update () {
-        
-
+        Debug.Log(bankCounter);
         }
 
  
@@ -31,8 +30,9 @@ public class bankenterTrigger : MonoBehaviour {
     public void openDoorAndLoadBankGame()
     {
         if (bankCounter == 1) {
-            new WaitForSeconds(4);
+         //   new WaitForSeconds(4);
             Application.LoadLevel(3);
+            Debug.Log("Loading new level");
         }
         //open the door and pull the trigger after the animation ends
         bankDoor.transform.Rotate((new Vector3(8.07f, -11.33f, -4.99f)), turnSpeed * Time.deltaTime);
