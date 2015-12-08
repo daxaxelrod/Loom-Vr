@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using BankFiniteStateMachine;
+// using BankFiniteStateMachine;
 
 public class StartBankLogic : MonoBehaviour {
 
