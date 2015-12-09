@@ -6,11 +6,16 @@ using UnityEngine;
 public enum Transition
 {
 	NullTransition = 0,
+    SawPlayer = 1,
+    LostPlayer = 2,
 }
 
 public enum StateID
 {
     NullStateID = 0,
+    ChasingPlayer = 1,
+    FollowPath = 2,
+    FollowingPath = 3,
 }
 
 public abstract class FSMState
@@ -29,7 +34,7 @@ public abstract class FSMState
 
         }
 
-        if (id = StateID.NullStateID) {
+        if (id == StateID.NullStateID) {
             Debug.LogError("FSM had a pretty bad error. Null STATE id is not allowed for a real ID");
             return;
         }
@@ -195,7 +200,7 @@ public class FSMSystem {
         }
         // look at current state
         // see if it has the transition passed as an argument
-        StateID id = currentState.GetOutputState(); // using method created above
+        StateID id = currentState.GetOutputState(trans); // using method created above
         if (id == StateID.NullStateID) {
             Debug.LogError("FSM ERROR: State " + currentStateID.ToString() + " does not have a target state " +
                            " for transition " + trans.ToString());

@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="Assets\Add_Basic_Test_sound.cs" />
     <Compile Include="Assets\BackToMainScene.cs" />
+    <Compile Include="Assets\BankFiniteStateMachine.cs" />
     <Compile Include="Assets\BuyChairScript.cs" />
     <Compile Include="Assets\BuySpeaker.cs" />
     <Compile Include="Assets\BuyTable.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\MakeHemisphere.cs" />
     <Compile Include="Assets\Modified_trans_and_Jump.cs" />
     <Compile Include="Assets\MoveTrainexwheels.cs" />
+    <Compile Include="Assets\NPCControl.cs" />
     <Compile Include="Assets\OSPNative\scripts\ONSPAudioSource.cs" />
     <Compile Include="Assets\OVR\Moonlight\Scripts\OVRDebugHeadController.cs" />
     <Compile Include="Assets\OVR\Moonlight\Scripts\OVROverlay.cs" />
