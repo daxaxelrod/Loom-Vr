@@ -147,6 +147,7 @@
     <Compile Include="Assets\goUpStairs.cs" />
     <Compile Include="Assets\guy1speech.cs" />
     <Compile Include="Assets\loadNewComponenet.cs" />
+    <Compile Include="Assets\menuScript.cs" />
     <Compile Include="Assets\panderiaTrigger.cs" />
     <Compile Include="Assets\poopItself.cs" />
     <Compile Include="Assets\preventCameraFromWallClip.cs" />
@@ -158,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\David Maya Assets\License.txt" />
+    <None Include="Assets\David Maya Assets\ReadMe.txt" />
     <None Include="Assets\David Maya Assets\column\archibase.net.txt" />
     <None Include="Assets\David Maya Assets\homemadesounds\Read.txt" />
     <None Include="Assets\OVR\Moonlight\Resources\Unlit Transparent Color.shader" />
