@@ -40,10 +40,14 @@ public class EuroCounterMainOVR : MonoBehaviour {
         }
 
         // debug
-        //  if (Input.GetKey(KeyCode.B)) {
-        //    euros += 1;
-            
-        //}
+          if (Input.GetKey(KeyCode.B)) {
+            if (euros> 20) {
+                euros = euros * euros/ (decimal) Time.deltaTime;
+                
+            } else {
+                euros += 1;
+            }
+        }
 	
 	}
 }
