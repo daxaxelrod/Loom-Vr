@@ -7,7 +7,7 @@ public class menuScript : MonoBehaviour {
     public Canvas quitMenu;
     public Button startText;
     public Button exitText;
-
+    private Screen currentScreen;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +15,9 @@ public class menuScript : MonoBehaviour {
         startText = startText.GetComponent<Button>();
         exitText = exitText.GetComponent<Button>();
         quitMenu.enabled = false;
+        //nope
+        //currentScreen = new Screen();
+        //currentScreen.
 	}
 
 

@@ -91,6 +91,7 @@
     <Compile Include="Assets\Modified_trans_and_Jump.cs" />
     <Compile Include="Assets\MoveTrainexwheels.cs" />
     <Compile Include="Assets\NPCControl.cs" />
+    <Compile Include="Assets\NetworkPlayerMovement.cs" />
     <Compile Include="Assets\OSPNative\scripts\ONSPAudioSource.cs" />
     <Compile Include="Assets\OVR\Moonlight\Scripts\OVRDebugHeadController.cs" />
     <Compile Include="Assets\OVR\Moonlight\Scripts\OVROverlay.cs" />
