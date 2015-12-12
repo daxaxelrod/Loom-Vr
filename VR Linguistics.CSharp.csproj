@@ -86,6 +86,7 @@
     <Compile Include="Assets\GirlMovement.cs" />
     <Compile Include="Assets\GoToRestraunt.cs" />
     <Compile Include="Assets\HorseRandomWalk.cs" />
+    <Compile Include="Assets\ITweenTestPath.cs" />
     <Compile Include="Assets\InputReceptorText.cs" />
     <Compile Include="Assets\MakeHemisphere.cs" />
     <Compile Include="Assets\Modified_trans_and_Jump.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="Assets\OpenDoorWithE.cs" />
     <Compile Include="Assets\OpenFencedoor.cs" />
     <Compile Include="Assets\Panaderia_owner.cs" />
+    <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
     <Compile Include="Assets\PressQForInception.cs" />
     <Compile Include="Assets\RaiseBarInBack.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\EventSystemChecker.cs" />
@@ -142,6 +144,7 @@
     <Compile Include="Assets\StartBankLogic.cs" />
     <Compile Include="Assets\StopCameraMovement.cs" />
     <Compile Include="Assets\Translate_and_jump.cs" />
+    <Compile Include="Assets\WithParentMoveToTarget.cs" />
     <Compile Include="Assets\addSelectorFruit.cs" />
     <Compile Include="Assets\bankenterTrigger.cs" />
     <Compile Include="Assets\changeClockTime.cs" />
@@ -161,6 +164,7 @@
     <Compile Include="Assets\translateBasedOnLanguageType.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\City Props Pack\Readme.txt" />
     <None Include="Assets\David Maya Assets\License.txt" />
     <None Include="Assets\David Maya Assets\ReadMe.txt" />
     <None Include="Assets\David Maya Assets\column\archibase.net.txt" />
@@ -171,6 +175,7 @@
     <None Include="Assets\PBS Materials Variety Pack\readme.txt" />
     <None Include="Assets\Plugins\Android\assets\placeholder.txt" />
     <None Include="Assets\Plugins\Android\donotdelete.txt" />
+    <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\Plugins\x86\donotdelete.txt" />
     <None Include="Assets\Plugins\x86_64\donotdelete.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
