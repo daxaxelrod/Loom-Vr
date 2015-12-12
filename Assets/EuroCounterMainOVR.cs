@@ -16,7 +16,7 @@ public class EuroCounterMainOVR : MonoBehaviour {
         //nope not add
         //possesions.Add();
 
-        GameObject map = Instantiate(Resources.Load("David_Objects_Prefabs", typeof(GameObject))) as GameObject;
+      //  GameObject map = Instantiate(Resources.Load("David_Objects_Prefabs", typeof(GameObject))) as GameObject;
 
     }
 

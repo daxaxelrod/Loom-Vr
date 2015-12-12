@@ -47,7 +47,7 @@ public class StartBankLogic : MonoBehaviour {
 
 
         //main camera for gestur analysis
-        mainCamera = GameObject.FindGameObjectWithTag("mainCamera");
+       // mainCamera = GameObject.FindGameObjectWithTag("mainCamera");
       
 
 	}

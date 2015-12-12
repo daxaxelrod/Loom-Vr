@@ -131,7 +131,7 @@ public class Translate_and_jump : MonoBehaviour
 
         }
 
-        if (Input.GetKey(KeyCode.Tab)) {
+        if (Input.GetKey(KeyCode.CapsLock)) {
             transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * turnTheFuckingSphere, Space.Self);
         }
 
