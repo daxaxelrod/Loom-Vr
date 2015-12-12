@@ -89,6 +89,7 @@
     <Compile Include="Assets\InputReceptorText.cs" />
     <Compile Include="Assets\MakeHemisphere.cs" />
     <Compile Include="Assets\Modified_trans_and_Jump.cs" />
+    <Compile Include="Assets\MoveTowardsTarget.cs" />
     <Compile Include="Assets\MoveTrainexwheels.cs" />
     <Compile Include="Assets\NPCControl.cs" />
     <Compile Include="Assets\NetworkPlayerMovement.cs" />
