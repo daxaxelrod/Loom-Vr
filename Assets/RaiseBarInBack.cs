@@ -4,7 +4,7 @@ using System.Collections;
 public class RaiseBarInBack : MonoBehaviour {
 
     [SerializeField]
-    private Camera camera;
+    private Camera OculusCam;
     //      public ParticleEmitter emmiter;
     private Ray ray;
     // Use this for initialization
@@ -15,7 +15,7 @@ public class RaiseBarInBack : MonoBehaviour {
 
 
         RaycastHit hit;
-        ray = camera.ScreenPointToRay(Vector3.forward);
+        ray = OculusCam.ScreenPointToRay(Vector3.forward);
         if (Physics.Raycast(ray, out hit))
         {
             Transform objectHit = hit.transform;
@@ -34,7 +34,8 @@ public class RaiseBarInBack : MonoBehaviour {
 
         //}
 
-        Debug.DrawRay(ray.origin, ray.direction, Color.blue, 10f);
+        Debug.DrawRay(ray.origin, ray.direction, Color.blue);
         
 	}
 }
+

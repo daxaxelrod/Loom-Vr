@@ -112,6 +112,7 @@
     <Compile Include="Assets\ITweenTestPath.cs" />
     <Compile Include="Assets\InputReceptorText.cs" />
     <Compile Include="Assets\MakeHemisphere.cs" />
+    <Compile Include="Assets\MerchantAI.cs" />
     <Compile Include="Assets\Modified_trans_and_Jump.cs" />
     <Compile Include="Assets\MoveTowardsTarget.cs" />
     <Compile Include="Assets\MoveTrainexwheels.cs" />
@@ -167,6 +168,7 @@
     <Compile Include="Assets\StartBankLogic.cs" />
     <Compile Include="Assets\StopCameraMovement.cs" />
     <Compile Include="Assets\Translate_and_jump.cs" />
+    <Compile Include="Assets\WinWaterCarnivalGame.cs" />
     <Compile Include="Assets\WithParentMoveToTarget.cs" />
     <Compile Include="Assets\addSelectorFruit.cs" />
     <Compile Include="Assets\bankenterTrigger.cs" />
