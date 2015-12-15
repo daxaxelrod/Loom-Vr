@@ -18,7 +18,7 @@ public class MerchantAI : MonoBehaviour {
     public Transform[] patrolWayPoints;
 
     //to be made
-    //private npcSight npcSight;
+    private npcSight npcSight;
     private NavMeshAgent nav;
     private Transform player;
     // to make
@@ -32,7 +32,7 @@ public class MerchantAI : MonoBehaviour {
 
     void Awake() {
         //See line 18,19
-        //npcSight = GetComponent<EnemySight>()
+        //npcSight = GetComponent<npcSight>()
         nav = GetComponent<NavMeshAgent>();
 
         // abstract all tags into a class and call it Tags so Tags.OVR = "MainCamera"
@@ -51,7 +51,7 @@ public class MerchantAI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	
+        print("Everyone wants to get in on the action.");
 	}
 	
 	// Update is called once per frame
@@ -160,3 +160,6 @@ public class MerchantAI : MonoBehaviour {
 
 
 }
+// waypoint 0 through 4 is for the first npc
+
+// waypoint 5 through 10 is for the second npc
