@@ -22,7 +22,7 @@ public class MerchantAI : MonoBehaviour {
     private NavMeshAgent nav;
     private Transform player;
     // to make
-    //private LastPlayerSighting lastPlayerSighting;
+    private lastPlayerSighting lastPlayerSighting;
     private float chaseTimer;
     private float patrolTimer;
     private int wayPointIndex;
@@ -31,16 +31,17 @@ public class MerchantAI : MonoBehaviour {
     // private PlayerBlackboard playerBlackboard;
 
     void Awake() {
-        //See line 18,19
-        //npcSight = GetComponent<npcSight>()
+        //See line 18,19 // all good now
+        npcSight = GetComponent<npcSight>();
         nav = GetComponent<NavMeshAgent>();
 
         // abstract all tags into a class and call it Tags so Tags.OVR = "MainCamera"
         player = GameObject.FindGameObjectWithTag("MainCamera").transform;
         
-        // see line 22,23
-        // lastPlayerSighting = GameObject.FindGameObjectWithTag("?!?!?!?!").GetComponent<LastPlayerSighting>();
+        // see line 22,23 // all good now
+         lastPlayerSighting = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<lastPlayerSighting>();
 
+        //fuck still need player blackboard
         //see line 29,30
         // playerBlackBoard = player.getComponent<PlayerBlackboard>();
 
