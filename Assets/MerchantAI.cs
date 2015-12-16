@@ -20,15 +20,16 @@ public class MerchantAI : MonoBehaviour {
     //to be made
     private npcSight npcSight;
     private NavMeshAgent nav;
-    private Transform player;
+    private GameObject player;
+    private Transform playerTransform;
     // to make
     private lastPlayerSighting lastPlayerSighting;
     private float chaseTimer;
     private float patrolTimer;
     private int wayPointIndex;
     private AudioSource clip;
-    // to be made ex video tutorial
-    // private PlayerBlackboard playerBlackboard;
+    // to be made ex video tutorial // almost there
+     private PlayerBlackboard playerBlackboard;
 
     void Awake() {
         //See line 18,19 // all good now
@@ -36,15 +37,15 @@ public class MerchantAI : MonoBehaviour {
         nav = GetComponent<NavMeshAgent>();
 
         // abstract all tags into a class and call it Tags so Tags.OVR = "MainCamera"
-        player = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        player = GameObject.FindGameObjectWithTag("MainCamera");
+        playerTransform = player.transform;
         
         // see line 22,23 // all good now
          lastPlayerSighting = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<lastPlayerSighting>();
 
         //fuck still need player blackboard
-        //see line 29,30
-        // playerBlackBoard = player.getComponent<PlayerBlackboard>();
-
+        //see line 29,30 //made but needs work
+        playerBlackboard = player.GetComponent<PlayerBlackboard>();
             }
     
 
@@ -52,8 +53,9 @@ public class MerchantAI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        print("Everyone wants to get in on the action.");
-	}
+        // print("Everyone wants to get in on the action.");
+        Debug.Log("Joe can go fuck himself");
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -64,13 +66,14 @@ public class MerchantAI : MonoBehaviour {
 
         // introducing new thing here
         //player blackboard. thanks game ai pro
-        if (false) //npcSight.playerInSight != lastPlayerSighting.resetPosition && playerBlackboard //this goes in if when done 
+        if (npcSight.playerInSight && playerBlackboard)  //this goes in if when done // fucking woot // != lastPlayerSighting.resetPosition << this isnt needed as it is a vector3
         {
             AppproachAndSpeak();
         }
         else {
             //use to be patrolling from video
             MeanderingAbout();
+            Debug.Log("the guy should be walking around");
         }
         
 	}
@@ -88,23 +91,25 @@ public class MerchantAI : MonoBehaviour {
 
         // position of the player minus the position of the npc yeilds the distance.
         // could also use the distance function
- //       Vector3 sightingDeltaPos = enemySight.personalLastSighting - transform.position;
+        Vector3 sightingDeltaPos = npcSight.personalLastSighting - transform.position;
 
         // something about a small margin ***COME BACK** sqrMag makes sense though
- //       if (sightingDeltaPos.sqrMagnitude > 4f) {
+       if (sightingDeltaPos.sqrMagnitude > 4f) {
 
-//            nav.destination = enemySight.personalLastSighting;
+            nav.destination = npcSight.personalLastSighting;
             nav.speed = chaseSpeed;
 
             //GOTTA start the audio here
             //randomize the audio. can i do that?
             // yes i can just not without the audio library
             clip = gameObject.GetComponent<AudioSource>();
-            if (!clip.isPlaying) {
-                clip.Play();
+            if (clip != null) {
+                if (!clip.isPlaying) {
+                    clip.Play();
+                }
             }
             
- //       }
+        }
 
         //SUPER IMPORTANT FOR TIME LOGIC
         //this handles how long one has been chased
@@ -117,8 +122,8 @@ public class MerchantAI : MonoBehaviour {
             if (chaseTimer > chaseWaitTime) {
                 // here we retrun the npc back to the conditions nessesary for seeing the player again
                 // esentially clearing the chache
- //            //   lastPlayerSighting.position = lastPlayerSighting.resetPosition;
- //            //   enemySight.personalLastSighting = lastPlayersighting.resetPosition;
+                lastPlayerSighting.position = lastPlayerSighting.resetPosition;
+                npcSight.personalLastSighting = lastPlayerSighting.resetPosition;
 
                 chaseTimer = 0f;
 
@@ -135,7 +140,9 @@ public class MerchantAI : MonoBehaviour {
     void MeanderingAbout() {
         // follows the same logic as the approach part of Approach and speech
         nav.speed = patrolSpeed;
-//        if (nav.destination == lastPlayerSighting.restPosition || nav.remainingDistance < nav.stoppingDistance){
+
+            // if the guy is near the next waypoint or there is no destination
+            if (nav.destination == lastPlayerSighting.resetPosition || nav.remainingDistance < nav.stoppingDistance){
             patrolTimer += Time.deltaTime;
 
             if (patrolTimer >= patrolWaitTime)
@@ -151,8 +158,8 @@ public class MerchantAI : MonoBehaviour {
                 }
                 patrolTimer = 0f;
             }
-        //}
-        //else { patrolTimer = 0f;}
+        }
+        else { patrolTimer = 0f;}
 
         nav.destination = patrolWayPoints[wayPointIndex].position;
         
