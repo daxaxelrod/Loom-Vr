@@ -11,7 +11,7 @@ public class MerchantAI : MonoBehaviour {
     // Patrolling
     // Conversing
 
-    public float patrolSpeed = 2f;
+    public float patrolSpeed = 20f;
     public float chaseSpeed = 5f;
     public float chaseWaitTime = 5f;
     public float patrolWaitTime = 1f;
@@ -69,11 +69,12 @@ public class MerchantAI : MonoBehaviour {
         if (npcSight.playerInSight && playerBlackboard)  //this goes in if when done // fucking woot // != lastPlayerSighting.resetPosition << this isnt needed as it is a vector3
         {
             AppproachAndSpeak();
+            Debug.Log("Stop walking and speak to me");
         }
         else {
             //use to be patrolling from video
             MeanderingAbout();
-            Debug.Log("the guy should be walking around");
+           // Debug.Log("the guy should be walking around");
         }
         
 	}
@@ -138,31 +139,66 @@ public class MerchantAI : MonoBehaviour {
     }
 
     void MeanderingAbout() {
+
+        //whoops didnt need to comment out. old code was fine
+
         // follows the same logic as the approach part of Approach and speech
+        //nav.speed = patrolSpeed;
+
+        //    // if the guy is near the next waypoint or there is no destination
+        //    if (nav.destination == lastPlayerSighting.resetPosition || nav.remainingDistance < nav.stoppingDistance){
+        //    patrolTimer += Time.deltaTime;
+
+        //    if (patrolTimer >= patrolWaitTime)
+        //    {
+        //        if (wayPointIndex == patrolWayPoints.Length - 1)
+        //        {
+        //            wayPointIndex = 0;
+
+        //        }
+        //        else
+        //        {
+        //            wayPointIndex++;
+        //        }
+        //        patrolTimer = 0f;
+        //    }
+        //}
+        //else { patrolTimer = 0f;}
+
+        //nav.destination = patrolWayPoints[wayPointIndex].position;
+
+        nav.stoppingDistance = 1.2f; // original is 0.8
+
+        // Set an appropriate speed for the NavMeshAgent.
         nav.speed = patrolSpeed;
 
-            // if the guy is near the next waypoint or there is no destination
-            if (nav.destination == lastPlayerSighting.resetPosition || nav.remainingDistance < nav.stoppingDistance){
+        // If near the next waypoint or there is no destination...
+        if (nav.destination == lastPlayerSighting.resetPosition || nav.remainingDistance < nav.stoppingDistance)
+        {
+            // ... increment the timer.
             patrolTimer += Time.deltaTime;
 
+            // If the timer exceeds the wait time...
             if (patrolTimer >= patrolWaitTime)
             {
+                // ... increment the wayPointIndex.
                 if (wayPointIndex == patrolWayPoints.Length - 1)
-                {
                     wayPointIndex = 0;
-
-                }
                 else
-                {
                     wayPointIndex++;
-                }
-                patrolTimer = 0f;
+
+                // Reset the timer.
+                patrolTimer = 0;
             }
         }
-        else { patrolTimer = 0f;}
+        else
+            // If not near a destination, reset the timer.
+            patrolTimer = 0;
 
+        // Set the destination to the patrolWayPoint.
         nav.destination = patrolWayPoints[wayPointIndex].position;
-        
+       // Debug.Log(nav.destination);
+
 
     }
 
