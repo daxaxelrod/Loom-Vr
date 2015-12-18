@@ -39,7 +39,7 @@ public class StartBankLogic : MonoBehaviour {
                             BankTextMesh[0].transform.rotation) as GameObject;
         if (gameInstructionText != null) {
             startGameTranslations = true;
-            Debug.Log("Game instruction Text has been instanciated");
+         //   Debug.Log("Game instruction Text has been instanciated");
         }
         // casting in unity is interesting too.
         // similar to python casting using as followed by object type

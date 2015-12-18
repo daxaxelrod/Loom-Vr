@@ -95,6 +95,7 @@ public class MerchantAI : MonoBehaviour {
         Vector3 sightingDeltaPos = npcSight.personalLastSighting - transform.position;
 
         // something about a small margin ***COME BACK** sqrMag makes sense though
+        
        if (sightingDeltaPos.sqrMagnitude > 4f) {
 
             nav.destination = npcSight.personalLastSighting;

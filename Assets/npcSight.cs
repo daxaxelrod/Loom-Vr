@@ -64,8 +64,10 @@ public class npcSight : MonoBehaviour {
 	}
 
     void OnTriggerStay(Collider other) {
+        Debug.Log("In the collider");
         if (other.gameObject == player) {
             playerInSight = true; // was this false by accident??
+            Debug.Log("Maurico im going to kill you");
 
             Vector3 direction = other.transform.position - transform.position;
             float angle = Vector3.Angle(direction, transform.forward);
