@@ -11,8 +11,8 @@ public class MerchantAI : MonoBehaviour {
     // Patrolling
     // Conversing
 
-    public float patrolSpeed = 20f;
-    public float chaseSpeed = 5f;
+    public float patrolSpeed = 200f;
+    public float chaseSpeed = 50f;
     public float chaseWaitTime = 5f;
     public float patrolWaitTime = 1f;
     public Transform[] patrolWayPoints;
@@ -171,6 +171,10 @@ public class MerchantAI : MonoBehaviour {
 
         // Set an appropriate speed for the NavMeshAgent.
         nav.speed = patrolSpeed;
+
+        if (nav.speed <= chaseSpeed) {
+            nav.speed = 100f; // do me a favor and dont hard code this for the future
+        }
 
         // If near the next waypoint or there is no destination...
         if (nav.destination == lastPlayerSighting.resetPosition || nav.remainingDistance < nav.stoppingDistance)

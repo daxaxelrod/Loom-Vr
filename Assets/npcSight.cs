@@ -23,7 +23,7 @@ public class npcSight : MonoBehaviour {
         col = GetComponent<SphereCollider>();
         anim = GetComponent<Animator>();
         // lastPlayerSighting = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<LastPlayerSighting>()
-        player = GameObject.FindGameObjectWithTag("MainCamera");
+        player = GameObject.FindGameObjectWithTag(Tags.MainCamera);
 
         //only if we want the player to have animation components 
         //maybe in the future
@@ -65,7 +65,7 @@ public class npcSight : MonoBehaviour {
 
     void OnTriggerStay(Collider other) {
         if (other.gameObject == player) {
-            playerInSight = false;
+            playerInSight = true; // was this false by accident??
 
             Vector3 direction = other.transform.position - transform.position;
             float angle = Vector3.Angle(direction, transform.forward);
