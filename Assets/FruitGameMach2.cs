@@ -11,14 +11,24 @@ public class FruitGameMach2 : MonoBehaviour {
     public float birdWait;
 
     public GUIText scoreText;
-    private int score;
 
 
-	// Use this for initialization
-	void Start () {
-        score = 0;
+    private int totalScore;
+
+    public PlayerBlackboard blackBoard;
+    private float gameEuros;
+    private bool hasTheGameEnded;
+    private int fruitsToWin;
+
+
+
+    // Use this for initialization
+    void Start () {
+        totalScore = 0;
         UpdateScore();
-        
+        blackBoard = GameObject.FindGameObjectWithTag(Tags.MainCamera).GetComponent<PlayerBlackboard>();
+        fruitsToWin = 50;
+
 	}
 
     private void UpdateScore()
@@ -33,6 +43,35 @@ public class FruitGameMach2 : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
+        // add whatever money the player has made
+        // what determines if the game has ended
+        if (hasTheGameEnded) {
+            blackBoard.euros += gameEuros;
+        }
+        else {
+            // play the game if it is still valid
+            playGame();
+
+        }
+
+
 	}
+
+
+    void playGame() {
+        if (totalScore >= fruitsToWin)
+        {
+            Debug.Log("Congrats, you've won our little game here");
+            hasTheGameEnded = true;
+        }
+        // do all the game logic in here?
+
+
+    }
+
+
+
+
+
+
 }
