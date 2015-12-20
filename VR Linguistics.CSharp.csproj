@@ -203,6 +203,8 @@
     <None Include="Assets\City Props Pack\Readme.txt" />
     <None Include="Assets\David Maya Assets\License.txt" />
     <None Include="Assets\David Maya Assets\ReadMe.txt" />
+    <None Include="Assets\David Maya Assets\ShaderTests\deffuse.shader" />
+    <None Include="Assets\David Maya Assets\ShaderTests\texture.shader" />
     <None Include="Assets\David Maya Assets\column\archibase.net.txt" />
     <None Include="Assets\David Maya Assets\homemadesounds\Read.txt" />
     <None Include="Assets\Jesse Prefabs\Materials\3D-TextShader.shader" />

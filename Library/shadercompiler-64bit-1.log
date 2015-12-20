@@ -1,25 +1,174 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-10636
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-12164
 Cmd: getPlatforms
 Cmd: preprocess
-  insize=1000 outsize=1282 ok=1
+  insize=941 outsize=240 ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=7541 outsize=3508 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+  api=4 type=0 insize=1000 outsize=1087 kw= pd= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=7541 outsize=10154 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=4284 outsize=2753 kw=POINT SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=4284 outsize=6149 kw=POINT SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=6643 outsize=3508 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6643 outsize=2346 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=3586 outsize=2484 kw= pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=3586 outsize=1314 kw= pd= ok=1
+  api=4 type=1 insize=1000 outsize=616 kw= pd= ok=1
 Cmd: preprocess
-  insize=1000 outsize=1282 ok=1
+  insize=23 outsize=20 ok=1
 Cmd: preprocess
-  insize=492 outsize=489 ok=1
+  error: 1 plat 18 at (6): Both vertex and fragment programs must be present in a CGPROGRAM. Excluding it from compilation.
+  insize=389 outsize=147 ok=1
+Cmd: preprocess
+  error: 1 plat 18 at (6): Both vertex and fragment programs must be present in a CGPROGRAM. Excluding it from compilation.
+  insize=480 outsize=147 ok=1
+Cmd: preprocess
+  error: 1 plat 18 at (6): Both vertex and fragment programs must be present in a CGPROGRAM. Excluding it from compilation.
+  insize=488 outsize=147 ok=1
+Cmd: preprocess
+  error: 1 plat 18 at (6): Both vertex and fragment programs must be present in a CGPROGRAM. Excluding it from compilation.
+  insize=489 outsize=147 ok=1
+Cmd: preprocess
+  error: 1 plat 18 at (6): Both vertex and fragment programs must be present in a CGPROGRAM. Excluding it from compilation.
+  insize=488 outsize=147 ok=1
+Cmd: preprocess
+  error: 1 plat 18 at (6): Both vertex and fragment programs must be present in a CGPROGRAM. Excluding it from compilation.
+  insize=484 outsize=147 ok=1
+Cmd: preprocess
+  insize=484 outsize=163 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=618 outsize=778 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=618 outsize=453 kw= pd= ok=1
+Cmd: preprocess
+  insize=484 outsize=163 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=618 outsize=778 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=618 outsize=453 kw= pd= ok=1
+Cmd: preprocess
+  insize=484 outsize=163 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=618 outsize=778 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=618 outsize=453 kw= pd= ok=1
+Cmd: preprocess
+  insize=562 outsize=229 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=630 outsize=778 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=630 outsize=469 kw= pd= ok=1
+Cmd: preprocess
+  insize=798 outsize=274 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (30): unrecognized identifier 'samper2D'\nCompiling Vertex program
+  api=4 type=0 insize=823 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=799 outsize=273 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (36): invalid subscript 'texcoord'\nCompiling Vertex program
+  api=4 type=0 insize=824 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=799 outsize=274 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (36): invalid subscript 'texcoord'\nCompiling Vertex program
+  api=4 type=0 insize=824 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=798 outsize=274 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (43): undeclared identifier '_MainTex'\nCompiling Vertex program
+  api=4 type=0 insize=823 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=799 outsize=274 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (45): syntax error: unexpected token '}'\nCompiling Vertex program
+  api=4 type=0 insize=824 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=800 outsize=274 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=825 outsize=1006 kw= pd= ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (40): 'frag': Not all control paths return a value\nCompiling Fragment program
+  api=4 type=1 insize=825 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=822 outsize=274 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=847 outsize=1006 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=847 outsize=616 kw= pd= ok=1
+Cmd: preprocess
+  insize=822 outsize=274 ok=1
+Cmd: preprocess
+  insize=822 outsize=274 ok=1
+Cmd: preprocess
+  insize=822 outsize=274 ok=1
+Cmd: preprocess
+  insize=822 outsize=274 ok=1
+Cmd: preprocess
+  insize=822 outsize=274 ok=1
+Cmd: preprocess
+  insize=822 outsize=274 ok=1
+Cmd: preprocess
+  insize=907 outsize=270 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=936 outsize=1217 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=936 outsize=673 kw= pd= ok=1
+Cmd: preprocess
+  insize=1524 outsize=269 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (53): undeclared identifier '_WolrdSpaceLightSpacePos0'\nCompiling Vertex program
+  api=4 type=0 insize=1553 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=1564 outsize=270 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (53): undeclared identifier '_WolrdSpaceLightSpacePos0'\nCompiling Vertex program
+  api=4 type=0 insize=1593 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=1564 outsize=269 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (53): undeclared identifier '_WorldSpaceLightSpacePos0'\nCompiling Vertex program
+  api=4 type=0 insize=1593 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=1559 outsize=270 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (54): undeclared identifier '_LightColor0'\nCompiling Vertex program
+  api=4 type=0 insize=1588 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=1582 outsize=270 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (54): undeclared identifier 'normalDirection'\nCompiling Vertex program
+  api=4 type=0 insize=1611 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=1592 outsize=270 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (54): undeclared identifier 'normalDirection'\nCompiling Vertex program
+  api=4 type=0 insize=1621 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=1591 outsize=270 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (56): incorrect number of arguments to numeric-type constructor\nCompiling Vertex program
+  api=4 type=0 insize=1620 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=1593 outsize=270 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1622 outsize=1371 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1622 outsize=1453 kw= pd= ok=1
+Cmd: compileSnippet
+  error: 2 plat 1 at (27): invalid vs_2_0 output semantic 'NORMAL'\nCompiling Vertex program
+  api=1 type=0 insize=1622 outsize=0 kw= pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at (27): invalid ps_2_0 input semantic 'NORMAL'\nCompiling Fragment program
+  api=1 type=1 insize=1622 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=1591 outsize=269 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1620 outsize=1371 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1620 outsize=1453 kw= pd= ok=1
+Cmd: compileSnippet
+  error: 2 plat 1 at (27): invalid vs_2_0 output semantic 'NORMAL'\nCompiling Vertex program
+  api=1 type=0 insize=1620 outsize=0 kw= pd= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at (27): invalid ps_2_0 input semantic 'NORMAL'\nCompiling Fragment program
+  api=1 type=1 insize=1620 outsize=0 kw= pd= ok=0
+Cmd: preprocess
+  insize=1652 outsize=331 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1620 outsize=1371 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1620 outsize=1453 kw= pd= ok=1
