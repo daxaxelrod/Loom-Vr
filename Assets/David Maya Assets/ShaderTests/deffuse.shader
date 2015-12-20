@@ -6,11 +6,14 @@
 	{
 		_Color("Main Color", Color) = (1,1,1,1)
 		_MainTex("Main Texture", 2D) = "white" {}
+		_SpecColor ("Specular Color", Color) = (1,1,1,1)
+		_SpecShininess ("Specular Shiniess", Range(1.0, 100.0)) = 2.0
 	}
 
 	SubShader
 	{
 		Pass {
+		 Tags {"LightMode" = "ForwardBase" }
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
