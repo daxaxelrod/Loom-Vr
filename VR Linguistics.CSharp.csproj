@@ -175,6 +175,7 @@
     <Compile Include="Assets\WithParentMoveToTarget.cs" />
     <Compile Include="Assets\addSelectorFruit.cs" />
     <Compile Include="Assets\bankenterTrigger.cs" />
+    <Compile Include="Assets\blink.cs" />
     <Compile Include="Assets\changeClockTime.cs" />
     <Compile Include="Assets\function.cs" />
     <Compile Include="Assets\goDownSecretStairs.cs" />
